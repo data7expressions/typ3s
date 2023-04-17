@@ -17,11 +17,9 @@
 	},
 	"keywords": [
 		"json",
-		"light",
+		"types",
 		"serialized",
 		"schema",
-		"deserializer",
-		"parse",
 		"stringify"
 	],
 	"author": "Flavio Lionel Rita <flaviolrita@hotmail.com>",
