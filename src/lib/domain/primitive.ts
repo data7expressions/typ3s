@@ -1,4 +1,4 @@
-export enum Kind
+export enum Primitive
 { any = 'any'
 , string = 'string'
 , integer = 'integer'

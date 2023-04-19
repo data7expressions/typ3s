@@ -18,7 +18,7 @@ describe('country', () => {
 	test('serialize', () => {
 		const type = Type.resolve(data)
 		const result = Type.serialize(type)
-		const expected = '{"kind":"obj","obj":{"properties":[{"name":"name","type":{"kind":"string"}},{"name":"region","type":{"kind":"string"}},{"name":"phoneCode","type":{"kind":"string"}},{"name":"timezones","type":{"kind":"list","list":{"items":{"kind":"obj","obj":{"properties":[{"name":"name","type":{"kind":"string"}},{"name":"offset","type":{"kind":"integer"}},{"name":"pos","type":{"kind":"obj","obj":{"properties":[{"name":"lat","type":{"kind":"decimal"}},{"name":"log","type":{"kind":"decimal"}}]}}}]}}}}}]}}'
+		const expected = '{"primitive":"obj","obj":{"properties":[{"name":"name","type":{"primitive":"string"}},{"name":"region","type":{"primitive":"string"}},{"name":"phoneCode","type":{"primitive":"string"}},{"name":"timezones","type":{"primitive":"list","list":{"items":{"primitive":"obj","obj":{"properties":[{"name":"name","type":{"primitive":"string"}},{"name":"offset","type":{"primitive":"integer"}},{"name":"pos","type":{"primitive":"obj","obj":{"properties":[{"name":"lat","type":{"primitive":"decimal"}},{"name":"log","type":{"primitive":"decimal"}}]}}}]}}}}}]}}'
 		expect(expected).toStrictEqual(result)
 	})
 	test('stringify', () => {

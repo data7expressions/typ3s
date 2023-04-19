@@ -1,2 +1,2 @@
-export * from './kind'
+export * from './primitive'
 export * from './type'

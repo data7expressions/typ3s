@@ -1,5 +1,5 @@
 /* eslint-disable no-use-before-define */
-import { Kind } from './kind'
+import { Primitive } from './primitive'
 
 export interface PropertyType {
 	name:string
@@ -15,75 +15,75 @@ export interface ListType {
 
 export class Type {
 // eslint-disable-next-line no-useless-constructor
-	public constructor (public kind:Kind, public obj?: ObjType, public list?:ListType) { }
+	public constructor (public primitive:Primitive, public obj?: ObjType, public list?:ListType) { }
 
 	public static get any ():Type {
-		return new Type(Kind.any)
+		return new Type(Primitive.any)
 	}
 
 	public static get string ():Type {
-		return new Type(Kind.string)
+		return new Type(Primitive.string)
 	}
 
 	public static get integer ():Type {
-		return new Type(Kind.integer)
+		return new Type(Primitive.integer)
 	}
 
 	public static get decimal ():Type {
-		return new Type(Kind.decimal)
+		return new Type(Primitive.decimal)
 	}
 
 	public static get number ():Type {
-		return new Type(Kind.number)
+		return new Type(Primitive.number)
 	}
 
 	public static get boolean ():Type {
-		return new Type(Kind.boolean)
+		return new Type(Primitive.boolean)
 	}
 
 	public static get date ():Type {
-		return new Type(Kind.date)
+		return new Type(Primitive.date)
 	}
 
 	public static get dateTime ():Type {
-		return new Type(Kind.dateTime)
+		return new Type(Primitive.dateTime)
 	}
 
 	public static get time ():Type {
-		return new Type(Kind.time)
+		return new Type(Primitive.time)
 	}
 
 	public static get void ():Type {
-		return new Type(Kind.void)
+		return new Type(Primitive.void)
 	}
 
 	// eslint-disable-next-line no-use-before-define,
 	public static Obj (properties: PropertyType[] = []):Type {
-		return new Type(Kind.obj, { properties })
+		return new Type(Primitive.obj, { properties })
 	}
 
 	public static List (items:Type):Type {
-		return new Type(Kind.list, undefined, { items })
+		return new Type(Primitive.list, undefined, { items })
 	}
 
 	public static isPrimitive (type:Type | string): boolean {
 		let value:string
 		if (typeof type === 'string') {
 			value = type
-		} else if (type !== undefined && type.kind !== undefined) {
-			value = type.kind.toString()
+		} else if (type !== undefined && type.primitive !== undefined) {
+			value = type.primitive.toString()
 		} else {
 			return false
 		}
 		return ['string', 'integer', 'decimal', 'number', 'boolean', 'date', 'dateTime', 'time'].includes(value)
 	}
 
-	public static to (kind:Kind | string): Type {
-		if (typeof kind === 'string') {
-			const kindKey = kind as keyof typeof Kind
-			return new Type(Kind[kindKey])
+	public static to (primitive:Primitive | string): Type {
+		if (typeof primitive === 'string') {
+			const primitiveKey = primitive as keyof typeof Primitive
+			return new Type(Primitive[primitiveKey])
 		}
-		return new Type(kind)
+		return new Type(primitive)
 	}
 
 	public static get (value: any): Type {
@@ -118,26 +118,22 @@ export class Type {
 		if (typeof type === 'string') {
 			return type.startsWith('[') && type.endsWith(']')
 		}
-		return type.kind === Kind.list
+		return type.primitive === Primitive.list
 	}
 
 	public static isObj (type:Type|string) : boolean {
 		if (typeof type === 'string') {
 			return type.startsWith('{') && type.endsWith('}')
 		}
-		return type.kind === Kind.obj
+		return type.primitive === Primitive.obj
 	}
-
-	// public static parse (value:string): Type {
-	// return new TypeParser(value).parse()
-	// }
 
 	public static stringify (type?: Type): string {
 		if (type === undefined) {
 			return 'any'
 		}
 		if (this.isPrimitive(type)) {
-			return type.kind.toString()
+			return type.primitive.toString()
 		}
 		if (this.isObj(type)) {
 			const properties:string[] = []
@@ -173,7 +169,7 @@ export class Type {
 	}
 
 	public static resolve (value:any):Type {
-		const type = new Type(Kind.undefined)
+		const type = new Type(Primitive.undefined)
 		this._resolve(value, type)
 		return type
 	}
@@ -183,24 +179,24 @@ export class Type {
 			return
 		}
 		if (Array.isArray(value)) {
-			if (type.kind === Kind.undefined) {
-				type.kind = Kind.list
-				type.list = { items: new Type(Kind.undefined) }
-			} else if (type.kind !== Kind.list && type.kind !== Kind.any) {
-				type.kind = Kind.any
+			if (type.primitive === Primitive.undefined) {
+				type.primitive = Primitive.list
+				type.list = { items: new Type(Primitive.undefined) }
+			} else if (type.primitive !== Primitive.list && type.primitive !== Primitive.any) {
+				type.primitive = Primitive.any
 			}
 			if (type.list === undefined || type.list.items === undefined) {
-				type.list = { items: new Type(Kind.undefined) }
+				type.list = { items: new Type(Primitive.undefined) }
 			}
 			for (const item of value) {
 				this._resolve(item, type.list.items)
 			}
 		} else if (typeof value === 'object') {
-			if (type.kind === Kind.undefined) {
-				type.kind = Kind.obj
+			if (type.primitive === Primitive.undefined) {
+				type.primitive = Primitive.obj
 				type.obj = { properties: [] }
-			} else if (type.kind !== Kind.obj && type.kind !== Kind.any) {
-				type.kind = Kind.any
+			} else if (type.primitive !== Primitive.obj && type.primitive !== Primitive.any) {
+				type.primitive = Primitive.any
 			}
 			if (type.obj === undefined || type.obj.properties === undefined) {
 				type.obj = { properties: [] }
@@ -208,36 +204,36 @@ export class Type {
 			for (const entry of Object.entries(value)) {
 				let property = type.obj.properties.find(p => p.name === entry[0])
 				if (property === undefined) {
-					property = { name: entry[0], type: new Type(Kind.undefined) }
+					property = { name: entry[0], type: new Type(Primitive.undefined) }
 					type.obj.properties.push(property)
 				} else if (property.type === undefined) {
-					property.type = new Type(Kind.undefined)
+					property.type = new Type(Primitive.undefined)
 				}
 				this._resolve(entry[1], property.type as Type)
 			}
 		} else if (typeof value === 'string') {
-			if (type.kind === Kind.undefined) {
-				type.kind = Kind.string
-			} else if (type.kind !== Kind.string && type.kind !== Kind.any) {
-				type.kind = Kind.any
+			if (type.primitive === Primitive.undefined) {
+				type.primitive = Primitive.string
+			} else if (type.primitive !== Primitive.string && type.primitive !== Primitive.any) {
+				type.primitive = Primitive.any
 			}
 		} else if (typeof value === 'number') {
-			if (type.kind === Kind.undefined) {
+			if (type.primitive === Primitive.undefined) {
 				if (Number.isInteger(value)) {
-					type.kind = Kind.integer
+					type.primitive = Primitive.integer
 				} else {
-					type.kind = Kind.decimal
+					type.primitive = Primitive.decimal
 				}
-			} else if (type.kind === Kind.integer && !Number.isInteger(value)) {
-				type.kind = Kind.decimal
-			} else if (type.kind !== Kind.integer && type.kind !== Kind.decimal && type.kind !== Kind.any) {
-				type.kind = Kind.any
+			} else if (type.primitive === Primitive.integer && !Number.isInteger(value)) {
+				type.primitive = Primitive.decimal
+			} else if (type.primitive !== Primitive.integer && type.primitive !== Primitive.decimal && type.primitive !== Primitive.any) {
+				type.primitive = Primitive.any
 			}
 		} else if (typeof value === 'boolean') {
-			if (type.kind === Kind.undefined) {
-				type.kind = Kind.boolean
-			} else if (type.kind !== Kind.boolean && type.kind !== Kind.any) {
-				type.kind = Kind.any
+			if (type.primitive === Primitive.undefined) {
+				type.primitive = Primitive.boolean
+			} else if (type.primitive !== Primitive.boolean && type.primitive !== Primitive.any) {
+				type.primitive = Primitive.any
 			}
 		}
 	}
@@ -278,7 +274,7 @@ class TypeParser {
 		const char = this.current
 		if (this.isAlphanumeric(char)) {
 			const value: any = this.getValue()
-			if (Type.isPrimitive(value) || value === Kind.any) {
+			if (Type.isPrimitive(value) || value === Primitive.any) {
 				return Type.to(value)
 			} else {
 				throw new Error(`Cannot solve ${value}`)
@@ -287,12 +283,12 @@ class TypeParser {
 			this.index += 1
 			this.forwardSpaces()
 			const objectType = this.getObject()
-			return new Type(Kind.obj, objectType)
+			return new Type(Primitive.obj, objectType)
 		} else if (char === '[') {
 			this.index += 1
 			this.forwardSpaces()
 			const listType = this.getList()
-			return new Type(Kind.list, undefined, listType)
+			return new Type(Primitive.list, undefined, listType)
 		} else {
 			throw new Error('Cannot solve type')
 		}
