@@ -33,7 +33,7 @@ import { Type } from '../../lib'
 			}
 		]
 	}
-	const type = Type.resolve(data)
+	const type = Type.solve(data)
 	console.log(Type.serialize(type))
 	console.log(Type.stringify(type))
 })()

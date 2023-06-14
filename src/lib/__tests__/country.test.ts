@@ -16,13 +16,13 @@ beforeAll(async () => {
 
 describe('country', () => {
 	test('serialize', () => {
-		const type = Type.resolve(data)
+		const type = Type.solve(data)
 		const result = Type.serialize(type)
 		const expected = '{"primitive":"obj","obj":{"properties":[{"name":"name","type":{"primitive":"string"}},{"name":"region","type":{"primitive":"string"}},{"name":"phoneCode","type":{"primitive":"string"}},{"name":"timezones","type":{"primitive":"list","list":{"items":{"primitive":"obj","obj":{"properties":[{"name":"name","type":{"primitive":"string"}},{"name":"offset","type":{"primitive":"integer"}},{"name":"pos","type":{"primitive":"obj","obj":{"properties":[{"name":"lat","type":{"primitive":"decimal"}},{"name":"log","type":{"primitive":"decimal"}}]}}}]}}}}}]}}'
 		expect(expected).toStrictEqual(result)
 	})
 	test('stringify', () => {
-		const type = Type.resolve(data)
+		const type = Type.solve(data)
 		const result = Type.stringify(type)
 		const expected = '{name:string,region:string,phoneCode:string,timezones:[{name:string,offset:integer,pos:{lat:decimal,log:decimal}}]}'
 		expect(expected).toStrictEqual(result)

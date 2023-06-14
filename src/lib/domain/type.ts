@@ -13,9 +13,30 @@ export interface ListType {
 	items:Type
 }
 
+export interface FuncType {
+	params:ParamType[]
+	ret:Type
+}
+
+export interface ParamType {
+	name:string
+	type?:Type
+}
+
 export class Type {
-// eslint-disable-next-line no-useless-constructor
-	public constructor (public primitive:Primitive, public obj?: ObjType, public list?:ListType) { }
+	public nullable:boolean
+	public undefinable:boolean
+	public async:boolean
+	public constructor (
+			public primitive:Primitive
+			, public obj?: ObjType
+			, public list?:ListType
+			, public func?:FuncType
+	) {
+		this.nullable = false
+		this.undefinable = false
+		this.async = false
+	}
 
 	public static get any ():Type {
 		return new Type(Primitive.any)
@@ -64,6 +85,10 @@ export class Type {
 
 	public static List (items:Type):Type {
 		return new Type(Primitive.list, undefined, { items })
+	}
+
+	public static Function (params:ParamType[], ret:Type):Type {
+		return new Type(Primitive.function, undefined, undefined, { params, ret })
 	}
 
 	public static isPrimitive (type:Type | string): boolean {
@@ -128,6 +153,19 @@ export class Type {
 		return type.primitive === Primitive.obj
 	}
 
+	// Examples:
+	// sin valor de retorno: (name:string,nro:int)
+	// sin arguments: (>dateTime)
+	// simple: (name:string,nro:int>string)
+	// retorna otra function: (name:string,nro:int>(name:string>int))
+	// function que recibe function : ((name:string>string),nro:int>int)
+	public static isFunc (type:Type|string) : boolean {
+		if (typeof type === 'string') {
+			return type.startsWith('(') && type.endsWith(')')
+		}
+		return type.primitive === Primitive.function
+	}
+
 	public static stringify (type?: Type): string {
 		if (type === undefined) {
 			return 'any'
@@ -147,7 +185,19 @@ export class Type {
 			const arrayType = type.list as ListType
 			return `[${this.stringify(arrayType.items)}]`
 		}
+		if (this.isFunc(type)) {
+			const funcType = type.func as FuncType
+			const params:string[] = []
+			for (const paramType of funcType.params) {
+				params.push(`${paramType.name}:${this.stringify(paramType.type)}`)
+			}
+			return `(${params.join(',')}=>${this.stringify(funcType.ret)})`
+		}
 		return 'any'
+	}
+
+	public static parse (schema:string):Type {
+		return new TypeParser(schema).parse()
 	}
 
 	public static serialize (type?: Type):string | undefined {
@@ -164,17 +214,13 @@ export class Type {
 		return JSON.parse(type) as Type
 	}
 
-	public static parse (schema:string):Type {
-		return new TypeParser(schema).parse()
-	}
-
-	public static resolve (value:any):Type {
+	public static solve (value:any):Type {
 		const type = new Type(Primitive.undefined)
-		this._resolve(value, type)
+		this._solve(value, type)
 		return type
 	}
 
-	private static _resolve (value:any, type:Type):void {
+	private static _solve (value:any, type:Type):void {
 		if (value === undefined || value === null) {
 			return
 		}
@@ -189,8 +235,14 @@ export class Type {
 				type.list = { items: new Type(Primitive.undefined) }
 			}
 			for (const item of value) {
-				this._resolve(item, type.list.items)
+				this._solve(item, type.list.items)
 			}
+		} else if (typeof value === 'function') {
+			const str = value.toString()
+			type.primitive = Primitive.function
+			const funcType = new TypeParser(str).parse().func
+			type.func = funcType
+			console.log(str)
 		} else if (typeof value === 'object') {
 			if (type.primitive === Primitive.undefined) {
 				type.primitive = Primitive.obj
@@ -209,7 +261,7 @@ export class Type {
 				} else if (property.type === undefined) {
 					property.type = new Type(Primitive.undefined)
 				}
-				this._resolve(entry[1], property.type as Type)
+				this._solve(entry[1], property.type as Type)
 			}
 		} else if (typeof value === 'string') {
 			if (type.primitive === Primitive.undefined) {
@@ -289,6 +341,11 @@ class TypeParser {
 			this.forwardSpaces()
 			const listType = this.getList()
 			return new Type(Primitive.list, undefined, listType)
+		} else if (char === '(') {
+			this.index += 1
+			this.forwardSpaces()
+			const functionType = this.getFunction()
+			return new Type(Primitive.function, undefined, undefined, functionType)
 		} else {
 			throw new Error('Cannot solve type')
 		}
@@ -339,6 +396,37 @@ class TypeParser {
 		if (this.current === ']') this.index += 1
 		else throw new Error('List without end')
 		return { items: type }
+	}
+
+	private getFunction (): FuncType {
+		const params:ParamType[] = []
+		let ret: Type = Type.void
+		while (true) {
+			const name = this.getValue()
+			this.forwardSpaces()
+			let type = Type.any
+			if (this.current === ':') {
+				this.index += 1
+				type = this.getType()
+			}
+			params.push({ name, type })
+			this.forwardSpaces()
+			if (this.current === ',') {
+				this.index += 1
+				continue
+			}
+			if (this.current === '>') {
+				this.index += 2
+				ret = this.getType()
+			}
+			if (this.current === ')') {
+				this.index += 1
+				break
+			} else {
+				throw new Error('Function without end')
+			}
+		}
+		return { params, ret }
 	}
 
 	private forwardSpaces () {

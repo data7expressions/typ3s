@@ -11,5 +11,6 @@ export enum Primitive
 , void = 'void'
 , obj = 'obj'
 , list = 'list'
+, function = 'function'
 , undefined = 'undefined'
 }
