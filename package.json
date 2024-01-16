@@ -1,6 +1,6 @@
 {
 	"name": "typ3s",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "Allow define type on json",
 	"scripts": {
 		"lint": "npx eslint src",
