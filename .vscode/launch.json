@@ -30,6 +30,15 @@
 					"<node_internals>/**"
 				],
 				"program": "${workspaceFolder}/src/dev/labs/function.ts"
-			}		
+			},
+			{
+				"name": "list lab",
+				"type": "node",
+				"request": "launch",
+				"skipFiles": [
+					"<node_internals>/**"
+				],
+				"program": "${workspaceFolder}/src/dev/labs/list.ts"
+			}			
     ]
 }

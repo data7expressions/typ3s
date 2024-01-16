@@ -27,6 +27,11 @@ export class Type {
 	public nullable:boolean
 	public undefinable:boolean
 	public async:boolean
+	public unique:boolean
+	public repeated:number
+	public indefinite:number
+	public nullables:number
+	public count:number
 	public constructor (
 			public primitive:Primitive
 			, public obj?: ObjType
@@ -36,6 +41,11 @@ export class Type {
 		this.nullable = false
 		this.undefinable = false
 		this.async = false
+		this.unique = false
+		this.repeated = 0
+		this.count = 0
+		this.indefinite = 0
+		this.nullables = 0
 	}
 
 	public static get any ():Type {
@@ -287,6 +297,66 @@ export class Type {
 			} else if (type.primitive !== Primitive.boolean && type.primitive !== Primitive.any) {
 				type.primitive = Primitive.any
 			}
+		}
+	}
+
+	public static solveCardinality (value:any, type: Type):void {
+		if (Type.isList(type) && type.list && Type.isObj(type.list.items) && type.list.items.obj) {
+			for (const property of type.list.items.obj.properties) {
+				this.solvePropertyCardinality(value, property)
+			}
+		} else if (Type.isObj(type) && type.obj) {
+			for (const property of type.obj.properties) {
+				this.solvePropertyCardinality(value, property)
+			}
+		}
+	}
+
+	private static solvePropertyCardinality (value:any, property: PropertyType):void {
+		if (property.type && Type.isPrimitive(property.type)) {
+			for (let i = 0; i < value.length; i++) {
+				const item = value[i]
+				if (item[property.name] === undefined) {
+					property.type.indefinite++
+				} else if (item[property.name] === null) {
+					property.type.nullables++
+				} else {
+					for (let j = i + 1; j < value.length; j++) {
+						const item2 = value[j]
+						if (item[property.name] === item2[property.name]) {
+							property.type.repeated++
+						}
+					}
+				}
+			}
+			property.type.count = value.length
+			property.type.nullable = property.type.nullables > 0
+			property.type.undefinable = property.type.indefinite > 0
+			property.type.unique = property.type.repeated === 0 && property.type.count > 0
+		} else if (property.type && Type.isObj(property.type)) {
+			const values = []
+			for (const item of value) {
+				if (item[property.name] === undefined) {
+					property.type.indefinite++
+				} else if (item[property.name] === null) {
+					property.type.nullables++
+				} else {
+					values.push(item[property.name])
+				}
+			}
+			this.solveCardinality(values, property.type)
+		} else if (property.type && Type.isList(property.type)) {
+			const values = []
+			for (const item of value) {
+				if (item[property.name] === undefined) {
+					property.type.indefinite++
+				} else if (item[property.name] === null) {
+					property.type.nullables++
+				} else {
+					values.push(...item[property.name])
+				}
+			}
+			this.solveCardinality(values, property.type)
 		}
 	}
 }
