@@ -1,6 +1,6 @@
 {
 	"name": "typ3s",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Allow define type on json",
 	"scripts": {
 		"lint": "npx eslint src",
@@ -30,7 +30,7 @@
 	"standard-version": {
 		"header": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n\n## Versions\n"
 	},
-	"dependencies": {	},
+	"dependencies": {},
 	"devDependencies": {
 		"@types/jest": "^29.4.0",
 		"@types/node": "^18.11.18",
