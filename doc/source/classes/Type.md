@@ -52,7 +52,7 @@
 
 ### constructor
 
-• **new Type**(`primitive`, `obj?`, `list?`, `func?`)
+• **new Type**(`primitive`, `obj?`, `list?`, `func?`): [`Type`](Type.md)
 
 #### Parameters
 
@@ -63,9 +63,13 @@
 | `list?` | [`ListType`](../interfaces/ListType.md) |
 | `func?` | [`FuncType`](../interfaces/FuncType.md) |
 
+#### Returns
+
+[`Type`](Type.md)
+
 #### Defined in
 
-[domain/type.ts:30](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L30)
+[domain/type.ts:30](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L30)
 
 ## Properties
 
@@ -75,7 +79,7 @@
 
 #### Defined in
 
-[domain/type.ts:29](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L29)
+[domain/type.ts:29](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L29)
 
 ___
 
@@ -85,7 +89,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:34](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L34)
+[domain/type.ts:34](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L34)
 
 ___
 
@@ -95,7 +99,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:33](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L33)
+[domain/type.ts:33](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L33)
 
 ___
 
@@ -105,7 +109,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:27](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L27)
+[domain/type.ts:27](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L27)
 
 ___
 
@@ -115,7 +119,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:32](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L32)
+[domain/type.ts:32](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L32)
 
 ___
 
@@ -125,7 +129,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:31](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L31)
+[domain/type.ts:31](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L31)
 
 ___
 
@@ -135,13 +139,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:28](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L28)
+[domain/type.ts:28](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L28)
 
 ## Accessors
 
 ### any
 
-• `Static` `get` **any**(): [`Type`](Type.md)
+• `get` **any**(): [`Type`](Type.md)
 
 #### Returns
 
@@ -149,13 +153,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:41](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L41)
+[domain/type.ts:41](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L41)
 
 ___
 
 ### boolean
 
-• `Static` `get` **boolean**(): [`Type`](Type.md)
+• `get` **boolean**(): [`Type`](Type.md)
 
 #### Returns
 
@@ -163,13 +167,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:61](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L61)
+[domain/type.ts:61](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L61)
 
 ___
 
 ### date
 
-• `Static` `get` **date**(): [`Type`](Type.md)
+• `get` **date**(): [`Type`](Type.md)
 
 #### Returns
 
@@ -177,13 +181,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:65](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L65)
+[domain/type.ts:65](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L65)
 
 ___
 
 ### dateTime
 
-• `Static` `get` **dateTime**(): [`Type`](Type.md)
+• `get` **dateTime**(): [`Type`](Type.md)
 
 #### Returns
 
@@ -191,13 +195,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:69](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L69)
+[domain/type.ts:69](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L69)
 
 ___
 
 ### decimal
 
-• `Static` `get` **decimal**(): [`Type`](Type.md)
+• `get` **decimal**(): [`Type`](Type.md)
 
 #### Returns
 
@@ -205,13 +209,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:53](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L53)
+[domain/type.ts:53](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L53)
 
 ___
 
 ### integer
 
-• `Static` `get` **integer**(): [`Type`](Type.md)
+• `get` **integer**(): [`Type`](Type.md)
 
 #### Returns
 
@@ -219,13 +223,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:49](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L49)
+[domain/type.ts:49](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L49)
 
 ___
 
 ### number
 
-• `Static` `get` **number**(): [`Type`](Type.md)
+• `get` **number**(): [`Type`](Type.md)
 
 #### Returns
 
@@ -233,13 +237,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:57](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L57)
+[domain/type.ts:57](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L57)
 
 ___
 
 ### string
 
-• `Static` `get` **string**(): [`Type`](Type.md)
+• `get` **string**(): [`Type`](Type.md)
 
 #### Returns
 
@@ -247,13 +251,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:45](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L45)
+[domain/type.ts:45](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L45)
 
 ___
 
 ### time
 
-• `Static` `get` **time**(): [`Type`](Type.md)
+• `get` **time**(): [`Type`](Type.md)
 
 #### Returns
 
@@ -261,13 +265,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:73](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L73)
+[domain/type.ts:73](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L73)
 
 ___
 
 ### void
 
-• `Static` `get` **void**(): [`Type`](Type.md)
+• `get` **void**(): [`Type`](Type.md)
 
 #### Returns
 
@@ -275,13 +279,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:77](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L77)
+[domain/type.ts:77](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L77)
 
 ## Methods
 
 ### Function
 
-▸ `Static` **Function**(`params`, `ret`): [`Type`](Type.md)
+▸ **Function**(`params`, `ret`): [`Type`](Type.md)
 
 #### Parameters
 
@@ -296,13 +300,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:90](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L90)
+[domain/type.ts:90](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L90)
 
 ___
 
 ### List
 
-▸ `Static` **List**(`items`): [`Type`](Type.md)
+▸ **List**(`items`): [`Type`](Type.md)
 
 #### Parameters
 
@@ -316,13 +320,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:86](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L86)
+[domain/type.ts:86](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L86)
 
 ___
 
 ### Obj
 
-▸ `Static` **Obj**(`properties?`): [`Type`](Type.md)
+▸ **Obj**(`properties?`): [`Type`](Type.md)
 
 #### Parameters
 
@@ -336,13 +340,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:82](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L82)
+[domain/type.ts:82](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L82)
 
 ___
 
 ### deserialize
 
-▸ `Static` **deserialize**(`type?`): `undefined` \| [`Type`](Type.md)
+▸ **deserialize**(`type?`): `undefined` \| [`Type`](Type.md)
 
 #### Parameters
 
@@ -356,13 +360,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:210](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L210)
+[domain/type.ts:210](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L210)
 
 ___
 
 ### get
 
-▸ `Static` **get**(`value`): [`Type`](Type.md)
+▸ **get**(`value`): [`Type`](Type.md)
 
 #### Parameters
 
@@ -376,13 +380,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:114](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L114)
+[domain/type.ts:114](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L114)
 
 ___
 
 ### isFunc
 
-▸ `Static` **isFunc**(`type`): `boolean`
+▸ **isFunc**(`type`): `boolean`
 
 #### Parameters
 
@@ -396,13 +400,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:162](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L162)
+[domain/type.ts:162](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L162)
 
 ___
 
 ### isList
 
-▸ `Static` **isList**(`type`): `boolean`
+▸ **isList**(`type`): `boolean`
 
 #### Parameters
 
@@ -416,13 +420,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:142](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L142)
+[domain/type.ts:142](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L142)
 
 ___
 
 ### isObj
 
-▸ `Static` **isObj**(`type`): `boolean`
+▸ **isObj**(`type`): `boolean`
 
 #### Parameters
 
@@ -436,13 +440,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:149](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L149)
+[domain/type.ts:149](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L149)
 
 ___
 
 ### isPrimitive
 
-▸ `Static` **isPrimitive**(`type`): `boolean`
+▸ **isPrimitive**(`type`): `boolean`
 
 #### Parameters
 
@@ -456,13 +460,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:94](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L94)
+[domain/type.ts:94](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L94)
 
 ___
 
 ### parse
 
-▸ `Static` **parse**(`schema`): [`Type`](Type.md)
+▸ **parse**(`schema`): [`Type`](Type.md)
 
 #### Parameters
 
@@ -476,13 +480,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:199](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L199)
+[domain/type.ts:199](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L199)
 
 ___
 
 ### serialize
 
-▸ `Static` **serialize**(`type?`): `undefined` \| `string`
+▸ **serialize**(`type?`): `undefined` \| `string`
 
 #### Parameters
 
@@ -496,13 +500,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:203](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L203)
+[domain/type.ts:203](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L203)
 
 ___
 
 ### solve
 
-▸ `Static` **solve**(`value`): [`Type`](Type.md)
+▸ **solve**(`value`): [`Type`](Type.md)
 
 #### Parameters
 
@@ -516,13 +520,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:217](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L217)
+[domain/type.ts:217](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L217)
 
 ___
 
 ### stringify
 
-▸ `Static` **stringify**(`type?`): `string`
+▸ **stringify**(`type?`): `string`
 
 #### Parameters
 
@@ -536,13 +540,13 @@ ___
 
 #### Defined in
 
-[domain/type.ts:169](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L169)
+[domain/type.ts:169](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L169)
 
 ___
 
 ### to
 
-▸ `Static` **to**(`primitive`): [`Type`](Type.md)
+▸ **to**(`primitive`): [`Type`](Type.md)
 
 #### Parameters
 
@@ -556,4 +560,4 @@ ___
 
 #### Defined in
 
-[domain/type.ts:106](https://github.com/FlavioLionelRita/typ3s/blob/9ddd9fd/src/lib/domain/type.ts#L106)
+[domain/type.ts:106](https://github.com/FlavioLionelRita/typ3s/blob/670e829/src/lib/domain/type.ts#L106)
