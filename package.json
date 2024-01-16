@@ -7,9 +7,8 @@
 		"test": "npx jest --config jest-unit-config.json",
 		"build": "npx tsc",
 		"dist": "grunt dist",
-		"to_develop": "grunt to_develop",
-		"release": "grunt release",
-		"doc": "grunt doc"
+		"doc": "grunt doc",
+		"release": "grunt release"
 	},
 	"repository": {
 		"type": "git",
@@ -28,6 +27,9 @@
 		"url": "https://github.com/FlavioLionelRita/typ3s/issues"
 	},
 	"homepage": "https://github.com/FlavioLionelRita/typ3s#readme",
+	"standard-version": {
+		"header": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n\n## Versions\n"
+	},
 	"dependencies": {	},
 	"devDependencies": {
 		"@types/jest": "^29.4.0",
