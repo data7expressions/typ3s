@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ## Versions
 
+### [0.1.5](https://github.com/FlavioLionelRita/typ3s/compare/v0.1.4...v0.1.5) (2024-01-18)
+
+
+### Features
+
+* complete cardinality info ([d75b579](https://github.com/FlavioLionelRita/typ3s/commit/d75b5796bb1c2150e06b46a39e24eb2a90db8ca4)), closes [#0](https://github.com/FlavioLionelRita/typ3s/issues/0)
+
 ### [0.1.4](https://github.com/FlavioLionelRita/typ3s/compare/v0.1.3...v0.1.4) (2024-01-16)
 
 
