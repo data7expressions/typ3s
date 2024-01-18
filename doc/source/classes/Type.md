@@ -76,7 +76,7 @@
 
 #### Defined in
 
-[domain/type.ts:36](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L36)
+[domain/type.ts:36](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L36)
 
 ## Properties
 
@@ -86,7 +86,7 @@
 
 #### Defined in
 
-[domain/type.ts:29](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L29)
+[domain/type.ts:29](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L29)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:35](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L35)
+[domain/type.ts:35](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L35)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:40](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L40)
+[domain/type.ts:40](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L40)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:33](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L33)
+[domain/type.ts:33](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L33)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:39](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L39)
+[domain/type.ts:39](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L39)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:27](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L27)
+[domain/type.ts:27](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L27)
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:34](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L34)
+[domain/type.ts:34](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L34)
 
 ___
 
@@ -156,7 +156,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:38](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L38)
+[domain/type.ts:38](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L38)
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:37](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L37)
+[domain/type.ts:37](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L37)
 
 ___
 
@@ -176,7 +176,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:32](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L32)
+[domain/type.ts:32](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L32)
 
 ___
 
@@ -186,7 +186,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:31](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L31)
+[domain/type.ts:31](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L31)
 
 ___
 
@@ -196,7 +196,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:28](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L28)
+[domain/type.ts:28](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L28)
 
 ___
 
@@ -206,7 +206,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:30](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L30)
+[domain/type.ts:30](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L30)
 
 ## Accessors
 
@@ -220,7 +220,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:53](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L53)
+[domain/type.ts:53](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L53)
 
 ___
 
@@ -234,7 +234,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:73](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L73)
+[domain/type.ts:73](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L73)
 
 ___
 
@@ -248,7 +248,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:77](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L77)
+[domain/type.ts:77](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L77)
 
 ___
 
@@ -262,7 +262,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:81](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L81)
+[domain/type.ts:81](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L81)
 
 ___
 
@@ -276,7 +276,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:65](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L65)
+[domain/type.ts:65](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L65)
 
 ___
 
@@ -290,7 +290,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:61](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L61)
+[domain/type.ts:61](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L61)
 
 ___
 
@@ -304,7 +304,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:69](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L69)
+[domain/type.ts:69](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L69)
 
 ___
 
@@ -318,7 +318,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:57](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L57)
+[domain/type.ts:57](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L57)
 
 ___
 
@@ -332,7 +332,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:85](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L85)
+[domain/type.ts:85](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L85)
 
 ___
 
@@ -346,7 +346,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:89](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L89)
+[domain/type.ts:89](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L89)
 
 ## Methods
 
@@ -367,7 +367,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:102](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L102)
+[domain/type.ts:102](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L102)
 
 ___
 
@@ -387,7 +387,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:98](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L98)
+[domain/type.ts:98](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L98)
 
 ___
 
@@ -407,7 +407,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:94](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L94)
+[domain/type.ts:94](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L94)
 
 ___
 
@@ -427,7 +427,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:222](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L222)
+[domain/type.ts:222](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L222)
 
 ___
 
@@ -447,7 +447,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:126](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L126)
+[domain/type.ts:126](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L126)
 
 ___
 
@@ -467,7 +467,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:174](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L174)
+[domain/type.ts:174](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L174)
 
 ___
 
@@ -487,7 +487,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:154](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L154)
+[domain/type.ts:154](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L154)
 
 ___
 
@@ -507,7 +507,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:161](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L161)
+[domain/type.ts:161](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L161)
 
 ___
 
@@ -527,7 +527,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:106](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L106)
+[domain/type.ts:106](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L106)
 
 ___
 
@@ -547,7 +547,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:211](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L211)
+[domain/type.ts:211](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L211)
 
 ___
 
@@ -567,7 +567,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:215](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L215)
+[domain/type.ts:215](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L215)
 
 ___
 
@@ -587,7 +587,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:229](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L229)
+[domain/type.ts:229](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L229)
 
 ___
 
@@ -608,7 +608,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:305](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L305)
+[domain/type.ts:305](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L305)
 
 ___
 
@@ -628,7 +628,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:181](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L181)
+[domain/type.ts:181](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L181)
 
 ___
 
@@ -648,4 +648,4 @@ ___
 
 #### Defined in
 
-[domain/type.ts:118](https://github.com/FlavioLionelRita/typ3s/blob/abcf070/src/lib/domain/type.ts#L118)
+[domain/type.ts:118](https://github.com/FlavioLionelRita/typ3s/blob/b168c24/src/lib/domain/type.ts#L118)
