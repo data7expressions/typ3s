@@ -171,7 +171,6 @@ npx husky add .husky/pre-push  'branchlint'
 
 Main Tasks:
 
-
 | task                  | Description                              |
 |:--------------------- |:-----------------------------------------|
 | `npm run test`        | Run all tests.                           |
