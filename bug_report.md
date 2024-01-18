@@ -2,7 +2,7 @@
 name: Bug report
 ---
 (**NOTE**: This is used to report product bugs:
-  To report a security vulnerability, please visit [issues](https://github.com/FlavioLionelRita/typ3s/issues)
+  To report a security vulnerability, please visit [issues](https://github.com/expr-solver/typ3s/issues)
  
 **Bug description**
 
