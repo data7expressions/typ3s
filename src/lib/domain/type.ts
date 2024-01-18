@@ -29,6 +29,7 @@ export class Type {
 	public async:boolean
 	public unique:boolean
 	public repeated:number
+	public repeatRate:number
 	public indefinite:number
 	public nullables:number
 	public count:number
@@ -43,6 +44,7 @@ export class Type {
 		this.async = false
 		this.unique = false
 		this.repeated = 0
+		this.repeatRate = 0
 		this.count = 0
 		this.indefinite = 0
 		this.nullables = 0
@@ -309,6 +311,23 @@ export class Type {
 			for (const property of type.obj.properties) {
 				this.solvePropertyCardinality(value, property)
 			}
+		} else if (Type.isList(type) && type.list && Type.isPrimitive(type.list.items) && type.list.items.primitive) {
+			for (let i = 0; i < value.length; i++) {
+				const item = value[i]
+				if (item === undefined) {
+					type.list.items.indefinite++
+				} else if (item === null) {
+					type.list.items.nullables++
+				} else {
+					for (let j = i + 1; j < value.length; j++) {
+						const item2 = value[j]
+						if (item === item2) {
+							type.list.items.repeated++
+						}
+					}
+				}
+			}
+			this.completeCardinalityProperties(type.list.items, value.length)
 		}
 	}
 
@@ -329,10 +348,7 @@ export class Type {
 					}
 				}
 			}
-			property.type.count = value.length
-			property.type.nullable = property.type.nullables > 0
-			property.type.undefinable = property.type.indefinite > 0
-			property.type.unique = property.type.repeated === 0 && property.type.count > 0
+			this.completeCardinalityProperties(property.type, value.length)
 		} else if (property.type && Type.isObj(property.type)) {
 			const values = []
 			for (const item of value) {
@@ -344,6 +360,16 @@ export class Type {
 					values.push(item[property.name])
 				}
 			}
+			for (let i = 0; i < values.length; i++) {
+				const item = values[i]
+				for (let j = i + 1; j < values.length; j++) {
+					const item2 = values[j]
+					if (JSON.stringify(item) === JSON.stringify(item2)) {
+						property.type.repeated++
+					}
+				}
+			}
+			this.completeCardinalityProperties(property.type, value.length)
 			this.solveCardinality(values, property.type)
 		} else if (property.type && Type.isList(property.type)) {
 			const values = []
@@ -356,8 +382,33 @@ export class Type {
 					values.push(...item[property.name])
 				}
 			}
+			for (let i = 0; i < values.length; i++) {
+				const item = values[i]
+				for (let j = i + 1; j < values.length; j++) {
+					const item2 = values[j]
+					if (JSON.stringify(item) === JSON.stringify(item2)) {
+						property.type.repeated++
+					}
+				}
+			}
+			this.completeCardinalityProperties(property.type, values.length)
 			this.solveCardinality(values, property.type)
 		}
+	}
+
+	private static completeCardinalityProperties (type:Type, count:number): void {
+		type.repeatRate = type.repeated / this.iterations(count - 1)
+		type.count = count
+		type.nullable = type.nullables > 0
+		type.undefinable = type.indefinite > 0
+		type.unique = type.repeated === 0 && type.count > 0
+	}
+
+	private static iterations (n:number):number {
+		if (n === 0) {
+			return 0
+		}
+		return n + this.iterations(n - 1)
 	}
 }
 
