@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[domain/type.ts:9](https://github.com/FlavioLionelRita/typ3s/blob/237e999/src/lib/domain/type.ts#L9)
+[domain/type.ts:9](https://github.com/FlavioLionelRita/typ3s/blob/d75b579/src/lib/domain/type.ts#L9)
