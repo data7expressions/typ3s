@@ -4,6 +4,24 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+			{
+				"name": "simple lab",
+				"type": "node",
+				"request": "launch",
+				"skipFiles": [
+					"<node_internals>/**"
+				],
+				"program": "${workspaceFolder}/src/dev/labs/simple.ts"
+			},
+			{
+				"name": "cardinality lab",
+				"type": "node",
+				"request": "launch",
+				"skipFiles": [
+					"<node_internals>/**"
+				],
+				"program": "${workspaceFolder}/src/dev/labs/cardinality.ts"
+			},			
       {
 				"name": "order lab",
 				"type": "node",

@@ -21,8 +21,7 @@ import { Type } from '../../lib'
 				orderId: 139,
 				productId: 24,
 				unitPrice: 3.6,
-				quantity: 15,
-				discount: 0
+				quantity: 15
 			},
 			{
 				orderId: 139,
@@ -33,7 +32,7 @@ import { Type } from '../../lib'
 			}
 		]
 	}
-	const type = Type.solve(data)
+	const type = Type.type(data)
 	console.log(Type.serialize(type))
 	console.log(Type.stringify(type))
 })()

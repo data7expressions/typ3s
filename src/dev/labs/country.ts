@@ -11,15 +11,13 @@ import { Type } from '../../lib'
 			{ name: 'Canary', offset: 0, pos: { lat: 28.1248, log: -15.43 } }
 		]
 	}
-	const type = Type.solve(data)
+	const type = Type.type(data)
 	const stringified = Type.stringify(type)
 	const type2 = Type.parse(stringified)
-	const stringified2 = Type.stringify(type2)
-	const serialized = Type.serialize(type)
+	const serialized = Type.serialize(type2)
 	const deserialized = Type.deserialize(serialized)
 
 	console.log(stringified)
-	console.log(stringified2)
 	console.log(serialized)
 	console.log(deserialized)
 })()

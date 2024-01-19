@@ -16,13 +16,14 @@ beforeAll(async () => {
 
 describe('country', () => {
 	test('serialize', () => {
-		const type = Type.solve(data)
+		const type = Type.type(data)
 		const result = Type.serialize(type)
-		const expected = '{"primitive":"obj","obj":{"properties":[{"name":"name","type":{"primitive":"string","nullable":false,"undefinable":false,"async":false,"unique":false,"repeated":0,"repeatRate":0,"count":0,"indefinite":0,"nullables":0}},{"name":"region","type":{"primitive":"string","nullable":false,"undefinable":false,"async":false,"unique":false,"repeated":0,"repeatRate":0,"count":0,"indefinite":0,"nullables":0}},{"name":"phoneCode","type":{"primitive":"string","nullable":false,"undefinable":false,"async":false,"unique":false,"repeated":0,"repeatRate":0,"count":0,"indefinite":0,"nullables":0}},{"name":"timezones","type":{"primitive":"list","list":{"items":{"primitive":"obj","obj":{"properties":[{"name":"name","type":{"primitive":"string","nullable":false,"undefinable":false,"async":false,"unique":false,"repeated":0,"repeatRate":0,"count":0,"indefinite":0,"nullables":0}},{"name":"offset","type":{"primitive":"integer","nullable":false,"undefinable":false,"async":false,"unique":false,"repeated":0,"repeatRate":0,"count":0,"indefinite":0,"nullables":0}},{"name":"pos","type":{"primitive":"obj","obj":{"properties":[{"name":"lat","type":{"primitive":"decimal","nullable":false,"undefinable":false,"async":false,"unique":false,"repeated":0,"repeatRate":0,"count":0,"indefinite":0,"nullables":0}},{"name":"log","type":{"primitive":"decimal","nullable":false,"undefinable":false,"async":false,"unique":false,"repeated":0,"repeatRate":0,"count":0,"indefinite":0,"nullables":0}}]},"nullable":false,"undefinable":false,"async":false,"unique":false,"repeated":0,"repeatRate":0,"count":0,"indefinite":0,"nullables":0}}]},"nullable":false,"undefinable":false,"async":false,"unique":false,"repeated":0,"repeatRate":0,"count":0,"indefinite":0,"nullables":0}},"nullable":false,"undefinable":false,"async":false,"unique":false,"repeated":0,"repeatRate":0,"count":0,"indefinite":0,"nullables":0}}]},"nullable":false,"undefinable":false,"async":false,"unique":false,"repeated":0,"repeatRate":0,"count":0,"indefinite":0,"nullables":0}'
+		console.log(result)
+		const expected = '{"primitive":"obj","obj":{"properties":[{"name":"name","type":{"primitive":"string"}},{"name":"region","type":{"primitive":"string"}},{"name":"phoneCode","type":{"primitive":"string"}},{"name":"timezones","type":{"primitive":"list","list":{"items":{"primitive":"obj","obj":{"properties":[{"name":"name","type":{"primitive":"string"}},{"name":"offset","type":{"primitive":"integer"}},{"name":"pos","type":{"primitive":"obj","obj":{"properties":[{"name":"lat","type":{"primitive":"decimal"}},{"name":"log","type":{"primitive":"decimal"}}]}}}]}}}}}]}}'
 		expect(expected).toStrictEqual(result)
 	})
 	test('stringify', () => {
-		const type = Type.solve(data)
+		const type = Type.type(data)
 		const result = Type.stringify(type)
 		const expected = '{name:string,region:string,phoneCode:string,timezones:[{name:string,offset:integer,pos:{lat:decimal,log:decimal}}]}'
 		expect(expected).toStrictEqual(result)

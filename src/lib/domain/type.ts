@@ -24,31 +24,26 @@ export interface ParamType {
 }
 
 export class Type {
-	public nullable:boolean
-	public undefinable:boolean
-	public async:boolean
-	public unique:boolean
-	public repeated:number
-	public repeatRate:number
-	public indefinite:number
-	public nullables:number
-	public count:number
+	public nullable?:boolean
+	public undefinable?:boolean
+	public async?:boolean
+	public unique?:boolean
+	public repeated?:number
+	public repeatRate?:number
+	public indefinite?:number
+	public nullables?:number
+	public count?:number
+	public distinctCount?:number
+	public onParentDistinctRepeated?:number
+	public onParentDistinctRepeatedRate?:number
+	public onParentDistinctUnique?:boolean
+	// eslint-disable-next-line no-useless-constructor
 	public constructor (
 			public primitive:Primitive
 			, public obj?: ObjType
 			, public list?:ListType
 			, public func?:FuncType
-	) {
-		this.nullable = false
-		this.undefinable = false
-		this.async = false
-		this.unique = false
-		this.repeated = 0
-		this.repeatRate = 0
-		this.count = 0
-		this.indefinite = 0
-		this.nullables = 0
-	}
+	) {}
 
 	public static get any ():Type {
 		return new Type(Primitive.any)
@@ -178,12 +173,16 @@ export class Type {
 		return type.primitive === Primitive.function
 	}
 
+	private static modifier (type:Type):string {
+		return (type.undefinable ? '?' : type.nullable ? '!' : '')
+	}
+
 	public static stringify (type?: Type): string {
 		if (type === undefined) {
 			return 'any'
 		}
 		if (this.isPrimitive(type)) {
-			return type.primitive.toString()
+			return this.modifier(type) + type.primitive.toString()
 		}
 		if (this.isObj(type)) {
 			const properties:string[] = []
@@ -191,11 +190,11 @@ export class Type {
 			for (const propertyType of objectType.properties) {
 				properties.push(`${propertyType.name}:${this.stringify(propertyType.type)}`)
 			}
-			return `{${properties.join(',')}}`
+			return `${this.modifier(type)}{${properties.join(',')}}`
 		}
 		if (this.isList(type)) {
 			const arrayType = type.list as ListType
-			return `[${this.stringify(arrayType.items)}]`
+			return `${this.modifier(type)}[${this.stringify(arrayType.items)}]`
 		}
 		if (this.isFunc(type)) {
 			const funcType = type.func as FuncType
@@ -203,7 +202,7 @@ export class Type {
 			for (const paramType of funcType.params) {
 				params.push(`${paramType.name}:${this.stringify(paramType.type)}`)
 			}
-			return `(${params.join(',')}=>${this.stringify(funcType.ret)})`
+			return `(${params.join(',')}>${type.async ? '~' : ''} ${this.stringify(funcType.ret)})`
 		}
 		return 'any'
 	}
@@ -212,9 +211,12 @@ export class Type {
 		return new TypeParser(schema).parse()
 	}
 
-	public static serialize (type?: Type):string | undefined {
+	public static serialize (type?: Type, indentation?:number):string | undefined {
 		if (type === undefined || type === null) {
 			return undefined
+		}
+		if (indentation) {
+			return JSON.stringify(type, null, indentation)
 		}
 		return JSON.stringify(type)
 	}
@@ -226,13 +228,13 @@ export class Type {
 		return JSON.parse(type) as Type
 	}
 
-	public static solve (value:any):Type {
+	public static type (value:any):Type {
 		const type = new Type(Primitive.undefined)
-		this._solve(value, type)
+		this._type(value, type)
 		return type
 	}
 
-	private static _solve (value:any, type:Type):void {
+	private static _type (value:any, type:Type):void {
 		if (value === undefined || value === null) {
 			return
 		}
@@ -247,7 +249,7 @@ export class Type {
 				type.list = { items: new Type(Primitive.undefined) }
 			}
 			for (const item of value) {
-				this._solve(item, type.list.items)
+				this._type(item, type.list.items)
 			}
 		} else if (typeof value === 'function') {
 			const str = value.toString()
@@ -273,7 +275,7 @@ export class Type {
 				} else if (property.type === undefined) {
 					property.type = new Type(Primitive.undefined)
 				}
-				this._solve(entry[1], property.type as Type)
+				this._type(entry[1], property.type as Type)
 			}
 		} else if (typeof value === 'string') {
 			if (type.primitive === Primitive.undefined) {
@@ -302,18 +304,60 @@ export class Type {
 		}
 	}
 
-	public static solveCardinality (value:any, type: Type):void {
+	public static cardinality (value:any, type: Type):void {
 		if (Type.isList(type) && type.list && Type.isObj(type.list.items) && type.list.items.obj) {
+			// List of objects
+			const typeObj = type.list.items
+			if (!typeObj.repeated && !typeObj.nullables && !typeObj.indefinite) {
+				typeObj.repeated = 0
+				typeObj.nullables = 0
+				typeObj.indefinite = 0
+				const listObjects: { key:string, obj:any}[] = []
+				for (const obj of value) {
+					if (obj === undefined) {
+						typeObj.indefinite++
+					} else if (obj === null) {
+						typeObj.nullables++
+					} else {
+						const key = this.key(obj, typeObj)
+						listObjects.push({ key, obj })
+					}
+				}
+				const distinctObjects:{ key:string, obj:any}[] = []
+				for (let i = 0; i < listObjects.length; i++) {
+					const item = listObjects[i]
+					if (distinctObjects.find(o => o.key === item.key) === undefined) {
+						distinctObjects.push(item)
+					}
+					for (let j = i + 1; j < listObjects.length; j++) {
+						const item2 = listObjects[j]
+						if (item.key === item2.key) {
+							typeObj.repeated++
+						}
+					}
+				}
+				this.solveOnObjectProperties(distinctObjects.map(p => p.obj), typeObj)
+				this.completeCardinalityProperties(typeObj, value.length)
+			}
 			for (const property of type.list.items.obj.properties) {
 				this.solvePropertyCardinality(value, property)
 			}
 		} else if (Type.isObj(type) && type.obj) {
+			// Object
 			for (const property of type.obj.properties) {
 				this.solvePropertyCardinality(value, property)
 			}
 		} else if (Type.isList(type) && type.list && Type.isPrimitive(type.list.items) && type.list.items.primitive) {
+			// List of primitives
+			type.list.items.indefinite = 0
+			type.list.items.nullables = 0
+			type.list.items.repeated = 0
+			const distinct: any[] = []
 			for (let i = 0; i < value.length; i++) {
 				const item = value[i]
+				if (distinct.find(o => o === item) === undefined) {
+					distinct.push(item)
+				}
 				if (item === undefined) {
 					type.list.items.indefinite++
 				} else if (item === null) {
@@ -327,81 +371,132 @@ export class Type {
 					}
 				}
 			}
+			type.distinctCount = distinct.length
+			type.list.items.distinctCount = distinct.length
 			this.completeCardinalityProperties(type.list.items, value.length)
 		}
 	}
 
-	private static solvePropertyCardinality (value:any, property: PropertyType):void {
+	private static solvePropertyCardinality (list:any[], property: PropertyType):void {
+		if (!property.type) {
+			return
+		}
+		property.type.indefinite = 0
+		property.type.nullables = 0
+		property.type.repeated = 0
 		if (property.type && Type.isPrimitive(property.type)) {
-			for (let i = 0; i < value.length; i++) {
-				const item = value[i]
-				if (item[property.name] === undefined) {
+			// Property is a primitive in List of objects
+			for (let i = 0; i < list.length; i++) {
+				const item = list[i][property.name]
+				if (item === undefined) {
 					property.type.indefinite++
-				} else if (item[property.name] === null) {
+				} else if (item === null) {
 					property.type.nullables++
 				} else {
-					for (let j = i + 1; j < value.length; j++) {
-						const item2 = value[j]
-						if (item[property.name] === item2[property.name]) {
+					for (let j = i + 1; j < list.length; j++) {
+						const item2 = list[j][property.name]
+						if (item === item2) {
 							property.type.repeated++
 						}
 					}
 				}
 			}
-			this.completeCardinalityProperties(property.type, value.length)
-		} else if (property.type && Type.isObj(property.type)) {
-			const values = []
-			for (const item of value) {
-				if (item[property.name] === undefined) {
+			this.completeCardinalityProperties(property.type, list.length)
+		} else if (property.type && Type.isObj(property.type) && property.type.obj) {
+			// Property is an object in List of objects
+			const listObjects: { key:string, obj:any}[] = []
+			for (const objs of list) {
+				const obj = objs[property.name]
+				if (obj === undefined) {
 					property.type.indefinite++
-				} else if (item[property.name] === null) {
+				} else if (obj === null) {
 					property.type.nullables++
 				} else {
-					values.push(item[property.name])
+					listObjects.push({ key: JSON.stringify(obj), obj })
 				}
 			}
-			for (let i = 0; i < values.length; i++) {
-				const item = values[i]
-				for (let j = i + 1; j < values.length; j++) {
-					const item2 = values[j]
-					if (JSON.stringify(item) === JSON.stringify(item2)) {
+			const distinctObjects:{ key:string, obj:any}[] = []
+			for (let i = 0; i < listObjects.length; i++) {
+				const item = listObjects[i]
+				if (distinctObjects.find(o => o.key === item.key) === undefined) {
+					distinctObjects.push(item)
+				}
+				for (let j = i + 1; j < listObjects.length; j++) {
+					const item2 = listObjects[j]
+					if (item.key === item2.key) {
 						property.type.repeated++
 					}
 				}
 			}
-			this.completeCardinalityProperties(property.type, value.length)
-			this.solveCardinality(values, property.type)
-		} else if (property.type && Type.isList(property.type)) {
-			const values = []
-			for (const item of value) {
-				if (item[property.name] === undefined) {
+			this.solveOnObjectProperties(distinctObjects.map(p => p.obj), property.type)
+			this.completeCardinalityProperties(property.type, list.length)
+			this.cardinality(listObjects.map(o => o.obj), property.type)
+		} else if (property.type && Type.isList(property.type) && property.type.list && property.type.list.items) {
+			// Property is a list in List of objects
+			const dictionary: { key:string, obj:any}[] = []
+			for (const item of list) {
+				const children = item[property.name]
+				if (children === undefined) {
 					property.type.indefinite++
-				} else if (item[property.name] === null) {
+				} else if (children === null) {
 					property.type.nullables++
 				} else {
-					values.push(...item[property.name])
+					for (const child of children) {
+						const key = this.key(child, property.type.list.items)
+						dictionary.push({ key, obj: child })
+					}
 				}
 			}
-			for (let i = 0; i < values.length; i++) {
-				const item = values[i]
-				for (let j = i + 1; j < values.length; j++) {
-					const item2 = values[j]
-					if (JSON.stringify(item) === JSON.stringify(item2)) {
+			for (let i = 0; i < dictionary.length; i++) {
+				const item = dictionary[i]
+				for (let j = i + 1; j < dictionary.length; j++) {
+					const item2 = dictionary[j]
+					if (item.key === item2.key) {
 						property.type.repeated++
 					}
 				}
 			}
-			this.completeCardinalityProperties(property.type, values.length)
-			this.solveCardinality(values, property.type)
+			this.completeCardinalityProperties(property.type, dictionary.length)
+			this.cardinality(dictionary.map(p => p.obj), property.type)
+		}
+	}
+
+	private static solveOnObjectProperties (list:any[], type: Type):void {
+		if (!type.obj) {
+			return
+		}
+		type.distinctCount = list.length
+		for (const property of type.obj.properties) {
+			if (property.type && Type.isPrimitive(property.type)) {
+				property.type.onParentDistinctRepeated = 0
+				property.type.distinctCount = list.length
+				for (let i = 0; i < list.length; i++) {
+					const field = list[i][property.name]
+					if (field === undefined || field === null) {
+						continue
+					} else {
+						for (let j = i + 1; j < list.length; j++) {
+							const field2 = list[j][property.name]
+							if (field === field2) {
+								property.type.onParentDistinctRepeated++
+							}
+						}
+					}
+				}
+				property.type.onParentDistinctRepeatedRate = property.type.onParentDistinctRepeated / this.iterations(list.length - 1)
+				property.type.onParentDistinctUnique = property.type.onParentDistinctRepeated === 0 && list.length > 0
+			}
 		}
 	}
 
 	private static completeCardinalityProperties (type:Type, count:number): void {
-		type.repeatRate = type.repeated / this.iterations(count - 1)
 		type.count = count
-		type.nullable = type.nullables > 0
-		type.undefinable = type.indefinite > 0
-		type.unique = type.repeated === 0 && type.count > 0
+		if (type.repeated !== undefined && type.nullables !== undefined && type.indefinite !== undefined) {
+			type.repeatRate = type.repeated / this.iterations(count - 1)
+			type.nullable = type.nullables > 0
+			type.undefinable = type.indefinite > 0
+			type.unique = type.repeated === 0 && type.count > 0
+		}
 	}
 
 	private static iterations (n:number):number {
@@ -409,6 +504,31 @@ export class Type {
 			return 0
 		}
 		return n + this.iterations(n - 1)
+	}
+
+	public static key (value:any, type:Type): string {
+		if (Type.isList(type) && type.list) {
+			const keys:string[] = []
+			for (const item of value) {
+				keys.push(this.key(item, type.list.items))
+			}
+			return '[' + keys.sort().join(',') + ']'
+		} else if (Type.isObj(type) && type.obj) {
+			const keys:string[] = []
+			for (const property of type.obj.properties.sort((a, b) => a.name.localeCompare(b.name))) {
+				if (property.type) {
+					const propertyValue = value[property.name]
+					if (propertyValue !== undefined && propertyValue !== null) {
+						keys.push(property.name + ':' + this.key(propertyValue, property.type))
+					}
+				}
+			}
+			return '{' + keys.join(',') + '}'
+		} else if (Type.isPrimitive(type)) {
+			return value.toString()
+		} else {
+			return value.toString()
+		}
 	}
 }
 
@@ -430,6 +550,17 @@ class TypeParser {
 
 	private get current (): any {
 		return this.buffer[this.index]
+	}
+
+	private chars (count = 1, offset = 0): string {
+		const chars:string[] = []
+		for (let i = this.index + offset; i < count; i++) {
+			if (i >= this.length) {
+				return chars.join('')
+			}
+			chars.push(this.buffer[i])
+		}
+		return chars.join('')
 	}
 
 	public parse (): Type {
@@ -536,7 +667,7 @@ class TypeParser {
 				this.index += 1
 				continue
 			}
-			if (this.current === '>') {
+			if (this.chars(2) === '>') {
 				this.index += 2
 				ret = this.getType()
 			}

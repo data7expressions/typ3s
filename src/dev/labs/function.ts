@@ -10,7 +10,7 @@ import { Type } from '../../lib'
 		func
 	]
 	for (const item of list) {
-		const type = Type.solve(item)
+		const type = Type.type(item)
 		console.log(Type.serialize(type))
 		console.log(Type.stringify(type))
 	}

@@ -28,8 +28,8 @@ import { Type } from '../../lib'
 		},
 		{
 			name: 'Germany',
-			languages: ['German'],
 			region: { name: 'Europe', code: 'EU' },
+			languages: ['German'],
 			priority: 1,
 			phoneCode: 49,
 			timezones: [
@@ -39,8 +39,8 @@ import { Type } from '../../lib'
 		},
 		{
 			name: 'Portugal',
-			languages: ['Portuguese'],
 			region: { name: 'Europe', code: 'EU' },
+			languages: ['Portuguese'],
 			priority: 1,
 			phoneCode: 351,
 			timezones: [
@@ -51,8 +51,8 @@ import { Type } from '../../lib'
 		},
 		{
 			name: 'United States',
-			languages: ['English'],
 			region: { name: 'North America', code: 'NA' },
+			languages: ['English'],
 			priority: 1,
 			phoneCode: 1,
 			timezones: [
@@ -66,8 +66,8 @@ import { Type } from '../../lib'
 		},
 		{
 			name: 'Canada',
-			languages: ['English', 'French'],
 			region: { name: 'North America', code: 'NA' },
+			languages: ['English', 'French'],
 			priority: 1,
 			phoneCode: 2,
 			timezones: [
@@ -81,8 +81,8 @@ import { Type } from '../../lib'
 		},
 		{
 			name: 'Brasil',
-			languages: ['Portuguese'],
 			region: { name: 'South America', code: 'SA' },
+			languages: ['Portuguese'],
 			priority: 1,
 			phoneCode: 55,
 			timezones: [
@@ -103,8 +103,8 @@ import { Type } from '../../lib'
 			timezones: [{ name: 'Buenos Aires', offset: -3, pos: { lat: -34.6037, log: -58.3816 } }]
 		}
 	]
-	const type = Type.solve(data)
-	Type.solveCardinality(data, type)
+	const type = Type.type(data)
+	Type.cardinality(data, type)
 	console.log(Type.stringify(type))
-	console.log(JSON.stringify(JSON.parse(Type.serialize(type) as string), null, 2))
+	// console.log(Type.serialize(type))
 })()
