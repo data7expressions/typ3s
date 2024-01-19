@@ -1,6 +1,7 @@
 # typ3s
 
-json types, type , types
+The objective of this library is to obtain the type of an object, array, function, etc. \
+Also be able to obtain information about the cardinality of the data.
 
 ## Primitive
 
