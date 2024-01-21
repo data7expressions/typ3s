@@ -68,7 +68,7 @@ Also be able to obtain information about the cardinality of the data.
 | serialize    	| serialize type																|
 | deserialized	| deserialize type															|
 
-### Type method
+## Type method
 
 The type method allows us to obtain the type of an object, array, function, etc. \
 Identifying primitive types, arrays, objects, functions, etc. \
@@ -147,7 +147,7 @@ const type = Type.type(data)
 const stringified = Type.stringify(type)
 ```
 
-## parse method
+## Parse method
 
 The parse method allows us to convert a string to a type.
 
@@ -157,7 +157,7 @@ const stringified = Type.stringify(type)
 const type2 = Type.parse(stringified)
 ```
 
-## serialize method
+## Serialize method
 
 The serialize method allows us to serialize a type.
 
@@ -166,7 +166,7 @@ const type = Type.type(data)
 const serialized = Type.serialize(type)
 ```
 
-## deserialize method
+## Deserialize method
 
 The deserialize method allows us to deserialize a type.
 
