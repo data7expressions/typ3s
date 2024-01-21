@@ -75,6 +75,15 @@
 					"<node_internals>/**"
 				],
 				"program": "${workspaceFolder}/src/dev/labs/enums.ts"
+			},
+			{
+				"name": "validate lab",
+				"type": "node",
+				"request": "launch",
+				"skipFiles": [
+					"<node_internals>/**"
+				],
+				"program": "${workspaceFolder}/src/dev/labs/validate.ts"
 			}			
     ]
 }

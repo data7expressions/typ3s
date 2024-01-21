@@ -67,6 +67,7 @@ Also be able to obtain information about the cardinality of the data.
 | parse    			| converts the string to type										|
 | serialize    	| serialize type																|
 | deserialized	| deserialize type															|
+| validate			| validate data with type												|
 
 ## Type method
 
@@ -174,6 +175,19 @@ The deserialize method allows us to deserialize a type.
 const type = Type.type(data)
 const serialized = Type.serialize(type)
 const deserialized = Type.deserialize(serialized)
+```
+
+## Validate method
+
+The validate method allows us to validate data with a type.
+
+```ts
+let [isValid, message] = Type.validate(data, '[{name:string,region:{name:string,code:string,description:string},languages:[string],phoneCode:integer,religion:string}]')
+if (!isValid) {
+	console.log(message)
+} else {
+	console.log('Valid!')
+}
 ```
 
 ## Example
@@ -1212,6 +1226,106 @@ Giving information on the values and the number of times it is repeated.
   }
  }
 }
+```
+
+## Validate example
+
+This example shows how you can validate an object with a type.
+
+```ts
+import { Type } from 'typ3s'
+const data = [
+	{
+		name: 'Spain',
+		region: { name: 'Europe', code: 'EU', description: 'European Union' },
+		languages: ['Spanish', 'Catalan', 'Galician', 'Basque'],
+		phoneCode: 34,
+		religion: 'Roman Catholicism'
+	},
+	{
+		name: 'United Kingdom',
+		region: { name: 'Europe', code: 'EU', description: 'European Union' },
+		languages: ['English'],
+		phoneCode: 44,
+		religion: 'Christianity'
+	}
+]
+const withoutLanguages = [
+	{
+		name: 'Italy',
+		region: { name: 'Europe', code: 'EU', description: 'European Union' },
+		phoneCode: 39,
+		religion: 'Roman Catholicism'
+	}
+]
+const withoutRegionCode = [
+	{
+		name: 'France',
+		region: { name: 'Europe', description: 'European Union' },
+		languages: ['French'],
+		phoneCode: 33,
+		religion: 'Roman Catholicism'
+	}
+]
+const incorrectPhoneCode = [
+	{
+		name: 'Argentina',
+		region: { name: 'South America', code: 'SA', description: 'South America' },
+		languages: ['Spanish'],
+		phoneCode: '54',
+		religion: 'Roman Catholicism'
+	}
+]
+const type = Type.type(data)
+const stringified = Type.stringify(type)
+let [isValid, message] = Type.validate(data, type)
+if (!isValid) {
+	console.log(message)
+} else {
+	console.log('Valid!')
+}
+[isValid, message] = Type.validate(withoutLanguages, type)
+if (!isValid) {
+	console.log(message)
+} else {
+	console.log('Valid!')
+}
+[isValid, message] = Type.validate(withoutRegionCode, stringified)
+if (!isValid) {
+	console.log(message)
+} else {
+	console.log('Valid!')
+}
+[isValid, message] = Type.validate(incorrectPhoneCode, stringified)
+if (!isValid) {
+	console.log(message)
+} else {
+	console.log('Valid!')
+}
+```
+
+**Data Result:**
+
+```sh
+Valid!
+```
+
+**WithoutLanguages Result:**
+
+```sh
+[{name:string,region:{name:string,code:string,description:string},languages:[string],phoneCode:integer,religion:string}] item {name:string,region:{name:string,code:string,description:string},languages:[string],phoneCode:integer,religion:string} property languages [string] value: undefined is not an array
+```
+
+**WithoutRegionCode Result:**
+
+```sh
+[{name:string,region:{name:string,code:string,description:string},languages:[string],phoneCode:integer,religion:string}] item {name:string,region:{name:string,code:string,description:string},languages:[string],phoneCode:integer,religion:string} property region {name:string,code:string,description:string} property code Value undefined is not a string
+```
+
+**IncorrectPhoneCode Result:**
+
+```sh
+[{name:string,region:{name:string,code:string,description:string},languages:[string],phoneCode:integer,religion:string}] item {name:string,region:{name:string,code:string,description:string},languages:[string],phoneCode:integer,religion:string} property phoneCode Value 54 is not an integer
 ```
 
 ## Source documentation

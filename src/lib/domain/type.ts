@@ -245,9 +245,10 @@ export class Type {
 		return JSON.parse(type) as Type
 	}
 
-	public static validate (value:any, type:Type):[boolean, string] {
+	public static validate (value:any, type:Type|string):[boolean, string] {
 		try {
-			this._validate(value, type)
+			const _type = typeof type === 'string' ? this.parse(type) : type
+			this._validate(value, _type)
 			return [true, '']
 		} catch (error:any) {
 			return [false, error.message]
