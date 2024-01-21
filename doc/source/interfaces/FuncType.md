@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[domain/type.ts:18](https://github.com/FlavioLionelRita/typ3s/blob/d57fb60/src/lib/domain/type.ts#L18)
+[domain/type.ts:18](https://github.com/FlavioLionelRita/typ3s/blob/4112635/src/lib/domain/type.ts#L18)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[domain/type.ts:19](https://github.com/FlavioLionelRita/typ3s/blob/d57fb60/src/lib/domain/type.ts#L19)
+[domain/type.ts:19](https://github.com/FlavioLionelRita/typ3s/blob/4112635/src/lib/domain/type.ts#L19)
