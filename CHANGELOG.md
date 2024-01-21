@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Versions
 
+### [0.1.11](https://github.com/expr-solver/typ3s/compare/v0.1.10...v0.1.11) (2024-01-21)
+
 ### [0.1.10](https://github.com/expr-solver/typ3s/compare/v0.1.9...v0.1.10) (2024-01-19)
 
 ### [0.1.9](https://github.com/expr-solver/typ3s/compare/v0.1.8...v0.1.9) (2024-01-19)
