@@ -55,14 +55,17 @@ const data = [
 		languages: ['English'],
 		phoneCode: 1,
 		religion: 'Christianity'
+	},
+	{
+		name: 'Peru',
+		region: { name: 'South America', code: 'SA', description: 'South America' },
+		languages: ['Spanish'],
+		phoneCode: 51,
+		religion: 'Roman Catholicism'
 	}
 ]
-const type = Type.type(data)
+const type = Type.type(data, { info: true, describe: true })
 const stringified = Type.stringify(type)
-const type2 = Type.parse(stringified)
-const serialized = Type.serialize(type2, 2)
-const deserialized = Type.deserialize(serialized)
-const serialize2 = Type.serialize(deserialized)
+const serialized = Type.serialize(type, 1)
 console.log(stringified)
 console.log(serialized)
-console.log(serialize2)

@@ -1,4 +1,4 @@
-[jemv](../README.md) / PropertyType
+[Typ3s](../README.md) / PropertyType
 
 # Interface: PropertyType
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[domain/type.ts:5](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L5)
+[domain/type.ts:6](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L6)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[domain/type.ts:6](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L6)
+[domain/type.ts:7](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L7)

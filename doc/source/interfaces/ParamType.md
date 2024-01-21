@@ -1,4 +1,4 @@
-[jemv](../README.md) / ParamType
+[Typ3s](../README.md) / ParamType
 
 # Interface: ParamType
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[domain/type.ts:22](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L22)
+[domain/type.ts:23](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L23)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[domain/type.ts:23](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L23)
+[domain/type.ts:24](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L24)

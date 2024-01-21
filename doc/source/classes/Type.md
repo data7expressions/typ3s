@@ -1,4 +1,4 @@
-[jemv](../README.md) / Type
+[Typ3s](../README.md) / Type
 
 # Class: Type
 
@@ -13,18 +13,31 @@
 - [async](Type.md#async)
 - [count](Type.md#count)
 - [distinctCount](Type.md#distinctcount)
+- [enums](Type.md#enums)
 - [func](Type.md#func)
 - [indefinite](Type.md#indefinite)
 - [list](Type.md#list)
+- [max](Type.md#max)
+- [maxLen](Type.md#maxlen)
+- [mean](Type.md#mean)
+- [min](Type.md#min)
+- [minLen](Type.md#minlen)
 - [nullable](Type.md#nullable)
 - [nullables](Type.md#nullables)
 - [obj](Type.md#obj)
 - [onParentDistinctRepeated](Type.md#onparentdistinctrepeated)
 - [onParentDistinctRepeatedRate](Type.md#onparentdistinctrepeatedrate)
 - [onParentDistinctUnique](Type.md#onparentdistinctunique)
+- [percent10](Type.md#percent10)
+- [percent25](Type.md#percent25)
+- [percent50](Type.md#percent50)
+- [percent75](Type.md#percent75)
+- [percent90](Type.md#percent90)
 - [primitive](Type.md#primitive)
 - [repeatRate](Type.md#repeatrate)
 - [repeated](Type.md#repeated)
+- [std](Type.md#std)
+- [sum](Type.md#sum)
 - [undefinable](Type.md#undefinable)
 - [unique](Type.md#unique)
 
@@ -46,7 +59,6 @@
 - [Function](Type.md#function)
 - [List](Type.md#list-1)
 - [Obj](Type.md#obj-1)
-- [cardinality](Type.md#cardinality)
 - [deserialize](Type.md#deserialize)
 - [get](Type.md#get)
 - [isFunc](Type.md#isfunc)
@@ -59,6 +71,7 @@
 - [stringify](Type.md#stringify)
 - [to](Type.md#to)
 - [type](Type.md#type)
+- [validate](Type.md#validate)
 
 ## Constructors
 
@@ -81,7 +94,7 @@
 
 #### Defined in
 
-[domain/type.ts:41](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L41)
+[domain/type.ts:62](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L62)
 
 ## Properties
 
@@ -91,7 +104,7 @@
 
 #### Defined in
 
-[domain/type.ts:29](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L29)
+[domain/type.ts:36](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L36)
 
 ___
 
@@ -101,7 +114,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:35](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L35)
+[domain/type.ts:42](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L42)
 
 ___
 
@@ -111,7 +124,17 @@ ___
 
 #### Defined in
 
-[domain/type.ts:36](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L36)
+[domain/type.ts:43](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L43)
+
+___
+
+### enums
+
+• `Optional` **enums**: \{ `count`: `number` ; `value`: `any`  }[]
+
+#### Defined in
+
+[domain/type.ts:59](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L59)
 
 ___
 
@@ -121,7 +144,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:45](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L45)
+[domain/type.ts:66](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L66)
 
 ___
 
@@ -131,7 +154,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:33](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L33)
+[domain/type.ts:40](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L40)
 
 ___
 
@@ -141,7 +164,57 @@ ___
 
 #### Defined in
 
-[domain/type.ts:44](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L44)
+[domain/type.ts:65](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L65)
+
+___
+
+### max
+
+• `Optional` **max**: `any`
+
+#### Defined in
+
+[domain/type.ts:49](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L49)
+
+___
+
+### maxLen
+
+• `Optional` **maxLen**: `number`
+
+#### Defined in
+
+[domain/type.ts:51](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L51)
+
+___
+
+### mean
+
+• `Optional` **mean**: `any`
+
+#### Defined in
+
+[domain/type.ts:47](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L47)
+
+___
+
+### min
+
+• `Optional` **min**: `any`
+
+#### Defined in
+
+[domain/type.ts:50](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L50)
+
+___
+
+### minLen
+
+• `Optional` **minLen**: `number`
+
+#### Defined in
+
+[domain/type.ts:52](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L52)
 
 ___
 
@@ -151,7 +224,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:27](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L27)
+[domain/type.ts:34](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L34)
 
 ___
 
@@ -161,7 +234,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:34](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L34)
+[domain/type.ts:41](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L41)
 
 ___
 
@@ -171,7 +244,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:43](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L43)
+[domain/type.ts:64](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L64)
 
 ___
 
@@ -181,7 +254,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:37](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L37)
+[domain/type.ts:44](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L44)
 
 ___
 
@@ -191,7 +264,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:38](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L38)
+[domain/type.ts:45](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L45)
 
 ___
 
@@ -201,7 +274,57 @@ ___
 
 #### Defined in
 
-[domain/type.ts:39](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L39)
+[domain/type.ts:46](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L46)
+
+___
+
+### percent10
+
+• `Optional` **percent10**: `any`
+
+#### Defined in
+
+[domain/type.ts:54](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L54)
+
+___
+
+### percent25
+
+• `Optional` **percent25**: `any`
+
+#### Defined in
+
+[domain/type.ts:55](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L55)
+
+___
+
+### percent50
+
+• `Optional` **percent50**: `any`
+
+#### Defined in
+
+[domain/type.ts:56](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L56)
+
+___
+
+### percent75
+
+• `Optional` **percent75**: `any`
+
+#### Defined in
+
+[domain/type.ts:57](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L57)
+
+___
+
+### percent90
+
+• `Optional` **percent90**: `any`
+
+#### Defined in
+
+[domain/type.ts:58](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L58)
 
 ___
 
@@ -211,7 +334,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:42](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L42)
+[domain/type.ts:63](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L63)
 
 ___
 
@@ -221,7 +344,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:32](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L32)
+[domain/type.ts:39](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L39)
 
 ___
 
@@ -231,7 +354,27 @@ ___
 
 #### Defined in
 
-[domain/type.ts:31](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L31)
+[domain/type.ts:38](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L38)
+
+___
+
+### std
+
+• `Optional` **std**: `number`
+
+#### Defined in
+
+[domain/type.ts:53](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L53)
+
+___
+
+### sum
+
+• `Optional` **sum**: `any`
+
+#### Defined in
+
+[domain/type.ts:48](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L48)
 
 ___
 
@@ -241,7 +384,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:28](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L28)
+[domain/type.ts:35](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L35)
 
 ___
 
@@ -251,7 +394,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:30](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L30)
+[domain/type.ts:37](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L37)
 
 ## Accessors
 
@@ -265,7 +408,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:48](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L48)
+[domain/type.ts:69](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L69)
 
 ___
 
@@ -279,7 +422,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:68](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L68)
+[domain/type.ts:89](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L89)
 
 ___
 
@@ -293,7 +436,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:72](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L72)
+[domain/type.ts:93](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L93)
 
 ___
 
@@ -307,7 +450,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:76](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L76)
+[domain/type.ts:97](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L97)
 
 ___
 
@@ -321,7 +464,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:60](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L60)
+[domain/type.ts:81](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L81)
 
 ___
 
@@ -335,7 +478,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:56](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L56)
+[domain/type.ts:77](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L77)
 
 ___
 
@@ -349,7 +492,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:64](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L64)
+[domain/type.ts:85](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L85)
 
 ___
 
@@ -363,7 +506,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:52](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L52)
+[domain/type.ts:73](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L73)
 
 ___
 
@@ -377,7 +520,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:80](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L80)
+[domain/type.ts:101](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L101)
 
 ___
 
@@ -391,7 +534,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:84](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L84)
+[domain/type.ts:105](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L105)
 
 ## Methods
 
@@ -412,7 +555,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:97](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L97)
+[domain/type.ts:118](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L118)
 
 ___
 
@@ -432,7 +575,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:93](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L93)
+[domain/type.ts:114](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L114)
 
 ___
 
@@ -452,28 +595,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:89](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L89)
-
-___
-
-### cardinality
-
-▸ **cardinality**(`value`, `type`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
-| `type` | [`Type`](Type.md) |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[domain/type.ts:307](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L307)
+[domain/type.ts:110](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L110)
 
 ___
 
@@ -493,7 +615,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:224](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L224)
+[domain/type.ts:241](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L241)
 
 ___
 
@@ -513,7 +635,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:121](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L121)
+[domain/type.ts:142](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L142)
 
 ___
 
@@ -533,7 +655,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:169](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L169)
+[domain/type.ts:190](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L190)
 
 ___
 
@@ -553,7 +675,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:149](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L149)
+[domain/type.ts:170](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L170)
 
 ___
 
@@ -573,7 +695,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:156](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L156)
+[domain/type.ts:177](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L177)
 
 ___
 
@@ -593,7 +715,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:101](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L101)
+[domain/type.ts:122](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L122)
 
 ___
 
@@ -614,19 +736,19 @@ ___
 
 #### Defined in
 
-[domain/type.ts:509](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L509)
+[domain/type.ts:771](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L771)
 
 ___
 
 ### parse
 
-▸ **parse**(`schema`): [`Type`](Type.md)
+▸ **parse**(`stringified`): [`Type`](Type.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `schema` | `string` |
+| `stringified` | `string` |
 
 #### Returns
 
@@ -634,7 +756,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:210](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L210)
+[domain/type.ts:227](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L227)
 
 ___
 
@@ -655,7 +777,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:214](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L214)
+[domain/type.ts:231](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L231)
 
 ___
 
@@ -675,7 +797,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:180](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L180)
+[domain/type.ts:197](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L197)
 
 ___
 
@@ -695,19 +817,20 @@ ___
 
 #### Defined in
 
-[domain/type.ts:113](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L113)
+[domain/type.ts:134](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L134)
 
 ___
 
 ### type
 
-▸ **type**(`value`): [`Type`](Type.md)
+▸ **type**(`value`, `options?`): [`Type`](Type.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `value` | `any` |
+| `options?` | [`TypeOptions`](../interfaces/TypeOptions.md) |
 
 #### Returns
 
@@ -715,4 +838,25 @@ ___
 
 #### Defined in
 
-[domain/type.ts:231](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L231)
+[domain/type.ts:257](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L257)
+
+___
+
+### validate
+
+▸ **validate**(`value`, `type`): [`boolean`, `string`]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `any` |
+| `type` | [`Type`](Type.md) |
+
+#### Returns
+
+[`boolean`, `string`]
+
+#### Defined in
+
+[domain/type.ts:248](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L248)

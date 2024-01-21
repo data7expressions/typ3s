@@ -30,7 +30,7 @@ import { Type } from '../../lib'
 			name: 'Germany',
 			region: { name: 'Europe', code: 'EU' },
 			languages: ['German'],
-			priority: 1,
+			priority: 2,
 			phoneCode: 49,
 			timezones: [
 				{ name: 'Berlin', offset: 1, pos: { lat: 52.5200, log: 13.4050 } },
@@ -53,7 +53,7 @@ import { Type } from '../../lib'
 			name: 'United States',
 			region: { name: 'North America', code: 'NA' },
 			languages: ['English'],
-			priority: 1,
+			priority: 2,
 			phoneCode: 1,
 			timezones: [
 				{ name: 'New York', offset: -5, pos: { lat: 40.7128, log: -74.0060 } },
@@ -103,8 +103,7 @@ import { Type } from '../../lib'
 			timezones: [{ name: 'Buenos Aires', offset: -3, pos: { lat: -34.6037, log: -58.3816 } }]
 		}
 	]
-	const type = Type.type(data)
-	Type.cardinality(data, type)
+	const type = Type.type(data, { info: true, enums: true, describe: true })
 	console.log(Type.stringify(type))
-	// console.log(Type.serialize(type))
+	console.log(Type.serialize(type))
 })()

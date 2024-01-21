@@ -57,12 +57,8 @@ const data = [
 		religion: 'Christianity'
 	}
 ]
-const type = Type.type(data)
+const type = Type.type(data, { info: true })
 const stringified = Type.stringify(type)
-const type2 = Type.parse(stringified)
-const serialized = Type.serialize(type2, 2)
-const deserialized = Type.deserialize(serialized)
-const serialize2 = Type.serialize(deserialized)
+const serialized = Type.serialize(type, 1)
 console.log(stringified)
 console.log(serialized)
-console.log(serialize2)

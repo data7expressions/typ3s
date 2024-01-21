@@ -1,4 +1,4 @@
-[jemv](../README.md) / ObjType
+[Typ3s](../README.md) / ObjType
 
 # Interface: ObjType
 
@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[domain/type.ts:9](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L9)
+[domain/type.ts:10](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L10)

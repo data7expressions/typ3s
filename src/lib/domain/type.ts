@@ -1,5 +1,6 @@
 /* eslint-disable no-use-before-define */
 import { Primitive } from './primitive'
+import { h3lp } from 'h3lp'
 
 export interface PropertyType {
 	name:string
@@ -23,6 +24,12 @@ export interface ParamType {
 	type?:Type
 }
 
+export interface TypeOptions {
+	info?:boolean
+	describe?:boolean
+	enums?:boolean
+}
+
 export class Type {
 	public nullable?:boolean
 	public undefinable?:boolean
@@ -37,6 +44,20 @@ export class Type {
 	public onParentDistinctRepeated?:number
 	public onParentDistinctRepeatedRate?:number
 	public onParentDistinctUnique?:boolean
+	public mean?:any
+	public sum?:any
+	public max?:any
+	public min?:any
+	public maxLen?:number
+	public minLen?:number
+	public std?:number
+	public percent10?:any
+	public percent25?:any
+	public percent50?:any
+	public percent75?:any
+	public percent90?:any
+	public enums?:{value:any, count:number}[]
+
 	// eslint-disable-next-line no-useless-constructor
 	public constructor (
 			public primitive:Primitive
@@ -173,10 +194,6 @@ export class Type {
 		return type.primitive === Primitive.function
 	}
 
-	private static modifier (type:Type):string {
-		return (type.undefinable ? '?' : type.nullable ? '!' : '')
-	}
-
 	public static stringify (type?: Type): string {
 		if (type === undefined) {
 			return 'any'
@@ -202,13 +219,13 @@ export class Type {
 			for (const paramType of funcType.params) {
 				params.push(`${paramType.name}:${this.stringify(paramType.type)}`)
 			}
-			return `(${params.join(',')}>${type.async ? '~' : ''} ${this.stringify(funcType.ret)})`
+			return `(${params.join(',')}>${this.modifier(type)} ${this.stringify(funcType.ret)})`
 		}
 		return 'any'
 	}
 
-	public static parse (schema:string):Type {
-		return new TypeParser(schema).parse()
+	public static parse (stringified:string):Type {
+		return new TypeParser(stringified).parse()
 	}
 
 	public static serialize (type?: Type, indentation?:number):string | undefined {
@@ -228,10 +245,112 @@ export class Type {
 		return JSON.parse(type) as Type
 	}
 
-	public static type (value:any):Type {
+	public static validate (value:any, type:Type):[boolean, string] {
+		try {
+			this._validate(value, type)
+			return [true, '']
+		} catch (error:any) {
+			return [false, error.message]
+		}
+	}
+
+	public static type (value:any, options?:TypeOptions):Type {
 		const type = new Type(Primitive.undefined)
 		this._type(value, type)
+		if (options) {
+			this.info(value, type, options)
+		}
 		return type
+	}
+
+	private static modifier (type:Type):string {
+		return (type.undefinable ? '?' : type.nullable ? '!' : type.unique ? '#' : type.async ? '~' : '')
+	}
+
+	private static _validate (value:any, type:Type):void {
+		const stringified = this.stringify(type)
+
+		if (type.nullable === undefined && (type.nullable = false) && value === null) {
+			throw new Error(`${stringified} is null`)
+		}
+		if (type.undefinable === undefined && (type.undefinable = false) && value === undefined) {
+			throw new Error(`${stringified} is undefined`)
+		}
+		if (Type.isObj(type) && type.obj) {
+			if (!h3lp.val.isObject(value)) {
+				throw new Error(`${stringified} value: ${value} is not an object`)
+			}
+			for (const property of type.obj.properties) {
+				try {
+					this._validate(value[property.name], property.type as Type)
+				} catch (error:any) {
+					throw new Error(`${stringified} property ${property.name} ${error.message}`)
+				}
+			}
+		} else if (Type.isList(type) && type.list && type.list.items) {
+			if (!h3lp.val.isArray(value)) {
+				throw new Error(`${stringified} value: ${value} is not an array`)
+			}
+			for (const item of value) {
+				try {
+					this._validate(item, type.list.items)
+				} catch (error:any) {
+					throw new Error(`${stringified} item ${error.message}`)
+				}
+			}
+		} else if (Type.isPrimitive(type)) {
+			const primitive = type.primitive as Primitive
+			switch (primitive) {
+			case Primitive.string:
+
+				if (!h3lp.val.isString(value)) {
+					throw new Error(`Value ${value} is not a string`)
+				}
+				break
+			case Primitive.integer:
+				if (!h3lp.val.isInteger(value)) {
+					throw new Error(`Value ${value} is not an integer`)
+				}
+				break
+			case Primitive.decimal:
+				if (!h3lp.val.isDecimal(value)) {
+					throw new Error(`Value ${value} is not a number`)
+				}
+				break
+			case Primitive.number:
+				if (!h3lp.val.isNumber(value)) {
+					throw new Error(`Value ${value} is not a number`)
+				}
+				break
+			case Primitive.boolean:
+				if (!h3lp.val.isBoolean(value)) {
+					throw new Error(`Value ${value} is not a boolean`)
+				}
+				break
+			case Primitive.date:
+				if (!h3lp.val.isDate(value)) {
+					throw new Error(`Value ${value} is not a date`)
+				}
+				break
+			case Primitive.dateTime:
+				if (!h3lp.val.isDateTime(value)) {
+					throw new Error(`Value ${value} is not a date`)
+				}
+				break
+			case Primitive.time:
+				if (!h3lp.val.isTime(value)) {
+					throw new Error(`Value ${value} is not a date`)
+				}
+				break
+			case Primitive.void:
+				if (value !== undefined) {
+					throw new Error(`Value ${value} is not undefined`)
+				}
+				break
+			default:
+				throw new Error(`Primitive ${primitive} not implemented`)
+			}
+		}
 	}
 
 	private static _type (value:any, type:Type):void {
@@ -304,7 +423,7 @@ export class Type {
 		}
 	}
 
-	public static cardinality (value:any, type: Type):void {
+	private static info (value:any, type: Type, options:TypeOptions):void {
 		if (Type.isList(type) && type.list && Type.isObj(type.list.items) && type.list.items.obj) {
 			// List of objects
 			const typeObj = type.list.items
@@ -336,16 +455,16 @@ export class Type {
 						}
 					}
 				}
-				this.solveOnObjectProperties(distinctObjects.map(p => p.obj), typeObj)
-				this.completeCardinalityProperties(typeObj, value.length)
+				this.onObjectProperties(distinctObjects.map(p => p.obj), typeObj)
+				this.completeInfoProperties(typeObj, value.length)
 			}
 			for (const property of type.list.items.obj.properties) {
-				this.solvePropertyCardinality(value, property)
+				this.propertyInfo(value, property, options)
 			}
 		} else if (Type.isObj(type) && type.obj) {
 			// Object
 			for (const property of type.obj.properties) {
-				this.solvePropertyCardinality(value, property)
+				this.propertyInfo(value, property, options)
 			}
 		} else if (Type.isList(type) && type.list && Type.isPrimitive(type.list.items) && type.list.items.primitive) {
 			// List of primitives
@@ -373,11 +492,17 @@ export class Type {
 			}
 			type.distinctCount = distinct.length
 			type.list.items.distinctCount = distinct.length
-			this.completeCardinalityProperties(type.list.items, value.length)
+			this.completeInfoProperties(type.list.items, value.length)
+			if (options.describe) {
+				this.describe(value, type.list.items)
+			}
+			if (options.enums) {
+				this.enums(value, type)
+			}
 		}
 	}
 
-	private static solvePropertyCardinality (list:any[], property: PropertyType):void {
+	private static propertyInfo (list:any[], property: PropertyType, options:TypeOptions):void {
 		if (!property.type) {
 			return
 		}
@@ -386,22 +511,29 @@ export class Type {
 		property.type.repeated = 0
 		if (property.type && Type.isPrimitive(property.type)) {
 			// Property is a primitive in List of objects
-			for (let i = 0; i < list.length; i++) {
-				const item = list[i][property.name]
+			const values = list.map(p => p[property.name])
+			for (let i = 0; i < values.length; i++) {
+				const item = values[i]
 				if (item === undefined) {
 					property.type.indefinite++
 				} else if (item === null) {
 					property.type.nullables++
 				} else {
 					for (let j = i + 1; j < list.length; j++) {
-						const item2 = list[j][property.name]
+						const item2 = values[j]
 						if (item === item2) {
 							property.type.repeated++
 						}
 					}
 				}
 			}
-			this.completeCardinalityProperties(property.type, list.length)
+			this.completeInfoProperties(property.type, list.length)
+			if (options.describe) {
+				this.describe(values, property.type)
+			}
+			if (options.enums) {
+				this.enums(values, property.type)
+			}
 		} else if (property.type && Type.isObj(property.type) && property.type.obj) {
 			// Property is an object in List of objects
 			const listObjects: { key:string, obj:any}[] = []
@@ -428,9 +560,9 @@ export class Type {
 					}
 				}
 			}
-			this.solveOnObjectProperties(distinctObjects.map(p => p.obj), property.type)
-			this.completeCardinalityProperties(property.type, list.length)
-			this.cardinality(listObjects.map(o => o.obj), property.type)
+			this.onObjectProperties(distinctObjects.map(p => p.obj), property.type)
+			this.completeInfoProperties(property.type, list.length)
+			this.info(listObjects.map(o => o.obj), property.type, options)
 		} else if (property.type && Type.isList(property.type) && property.type.list && property.type.list.items) {
 			// Property is a list in List of objects
 			const dictionary: { key:string, obj:any}[] = []
@@ -456,12 +588,12 @@ export class Type {
 					}
 				}
 			}
-			this.completeCardinalityProperties(property.type, dictionary.length)
-			this.cardinality(dictionary.map(p => p.obj), property.type)
+			this.completeInfoProperties(property.type, dictionary.length)
+			this.info(dictionary.map(p => p.obj), property.type, options)
 		}
 	}
 
-	private static solveOnObjectProperties (list:any[], type: Type):void {
+	private static onObjectProperties (list:any[], type: Type):void {
 		if (!type.obj) {
 			return
 		}
@@ -469,33 +601,163 @@ export class Type {
 		for (const property of type.obj.properties) {
 			if (property.type && Type.isPrimitive(property.type)) {
 				property.type.onParentDistinctRepeated = 0
-				property.type.distinctCount = list.length
-				for (let i = 0; i < list.length; i++) {
-					const field = list[i][property.name]
+				const distinct: any[] = []
+				const values = list.map(p => p[property.name])
+				for (let i = 0; i < values.length; i++) {
+					const field = values[i]
 					if (field === undefined || field === null) {
 						continue
 					} else {
-						for (let j = i + 1; j < list.length; j++) {
-							const field2 = list[j][property.name]
+						if (distinct.find(o => o === field) === undefined) {
+							distinct.push(field)
+						}
+						for (let j = i + 1; j < values.length; j++) {
+							const field2 = values[j]
 							if (field === field2) {
 								property.type.onParentDistinctRepeated++
 							}
 						}
 					}
 				}
+				property.type.distinctCount = distinct.length
 				property.type.onParentDistinctRepeatedRate = property.type.onParentDistinctRepeated / this.iterations(list.length - 1)
 				property.type.onParentDistinctUnique = property.type.onParentDistinctRepeated === 0 && list.length > 0
 			}
 		}
 	}
 
-	private static completeCardinalityProperties (type:Type, count:number): void {
+	private static completeInfoProperties (type:Type, count:number): void {
 		type.count = count
 		if (type.repeated !== undefined && type.nullables !== undefined && type.indefinite !== undefined) {
 			type.repeatRate = type.repeated / this.iterations(count - 1)
 			type.nullable = type.nullables > 0
 			type.undefinable = type.indefinite > 0
 			type.unique = type.repeated === 0 && type.count > 0
+		}
+	}
+
+	private static describe (list:any[], type: Type):any {
+		if (!this.isPrimitive(type) || !type.count) {
+			return null
+		}
+		const primitive = type.primitive as Primitive
+		const sorted = list.sort((a, b) => a - b)
+		const percentiles = this.percentiles(sorted, [10, 25, 50, 75, 90])
+		type.percent10 = percentiles[0]
+		type.percent25 = percentiles[1]
+		type.percent50 = percentiles[2]
+		type.percent75 = percentiles[3]
+		type.percent90 = percentiles[4]
+		if (['decimal', 'number', 'integer'].includes(primitive)) {
+			type.sum = 0
+			for (let i = 0; i < list.length; i++) {
+				const item = list[i]
+				if (item === undefined || item === null) {
+					continue
+				}
+				type.sum += item
+				if (type.max === undefined || type.max < item) {
+					type.max = item
+				}
+				if (type.min === undefined || type.min > item) {
+					type.min = item
+				}
+			}
+			type.mean = type.sum / list.length
+			// calculate standard deviation
+			const differencesSquared = []
+			for (let i = 0; i < list.length; i++) {
+				const difference = list[i] - type.mean
+				const diferenciaCuadrada = Math.pow(difference, 2)
+				differencesSquared.push(diferenciaCuadrada)
+			}
+			const meanSquareDifferences = differencesSquared.reduce((total, value) => total + value, 0) / list.length
+			type.std = Math.sqrt(meanSquareDifferences)
+		} else if (['dateTime', 'date', 'time'].includes(primitive)) {
+			let millisecondsTotal = 0
+			for (let i = 0; i < list.length; i++) {
+				const item = list[i]
+				if (item === undefined || item === null) {
+					continue
+				}
+				millisecondsTotal += item.getTime()
+				if (type.max === undefined || type.max < item) {
+					type.max = item
+				}
+				if (type.min === undefined || type.min > item) {
+					type.min = item
+				}
+			}
+			type.mean = new Date(millisecondsTotal / list.length)
+		} else if (primitive === 'string') {
+			for (let i = 0; i < list.length; i++) {
+				const item = list[i]
+				if (item === undefined || item === null) {
+					continue
+				}
+				if (type.max === undefined || type.max < item) {
+					type.max = item
+				}
+				if (type.min === undefined || type.min > item) {
+					type.min = item
+				}
+				if (type.maxLen === undefined || type.maxLen < item.length) {
+					type.maxLen = item.length
+				}
+				if (type.minLen === undefined || type.minLen > item.length) {
+					type.minLen = item.length
+				}
+			}
+		}
+	}
+
+	private static percentiles (sorted:any[], percentiles:number[]) {
+		const indicesPercentiles = percentiles.map(p => Math.floor((p / 100) * sorted.length))
+		return indicesPercentiles.map(index => sorted[index])
+	}
+
+	private static enums (list:any[], type: Type):any {
+		if (!this.isPrimitive(type) || !type.count) {
+			return null
+		}
+		const primitive = type.primitive as Primitive
+		if (['number', 'integer', 'string'].includes(primitive) &&
+			type.count && type.distinctCount &&
+			(type.distinctCount === 1 ||
+			(type.count > 6 && type.distinctCount < 3) ||
+			(type.count > 12 && type.distinctCount < 4) ||
+			(type.count > 100 && type.distinctCount / type.count < 0.1) ||
+			(type.count > 1000 && type.distinctCount / type.count < 0.05)
+			)
+		) {
+			type.enums = []
+			for (let i = 0; i < list.length; i++) {
+				const item = list[i]
+				if (item === undefined || item === null) {
+					continue
+				}
+				const enumItem = type.enums.find(e => e.value === item)
+				if (enumItem === undefined) {
+					type.enums.push({ value: item, count: 1 })
+				} else {
+					enumItem.count++
+				}
+			}
+		} else if (primitive === 'boolean') {
+			let trueCount = 0
+			let falseCount = 0
+			for (let i = 0; i < list.length; i++) {
+				const item = list[i]
+				if (item === undefined || item === null) {
+					continue
+				}
+				if (item) {
+					trueCount++
+				} else {
+					falseCount++
+				}
+			}
+			type.enums = [{ value: true, count: trueCount }, { value: false, count: falseCount }]
 		}
 	}
 

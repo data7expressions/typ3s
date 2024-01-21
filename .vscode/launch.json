@@ -12,16 +12,7 @@
 					"<node_internals>/**"
 				],
 				"program": "${workspaceFolder}/src/dev/labs/simple.ts"
-			},
-			{
-				"name": "cardinality lab",
-				"type": "node",
-				"request": "launch",
-				"skipFiles": [
-					"<node_internals>/**"
-				],
-				"program": "${workspaceFolder}/src/dev/labs/cardinality.ts"
-			},			
+			},						
       {
 				"name": "order lab",
 				"type": "node",
@@ -57,6 +48,33 @@
 					"<node_internals>/**"
 				],
 				"program": "${workspaceFolder}/src/dev/labs/list.ts"
+			},
+			{
+				"name": "info lab",
+				"type": "node",
+				"request": "launch",
+				"skipFiles": [
+					"<node_internals>/**"
+				],
+				"program": "${workspaceFolder}/src/dev/labs/info.ts"
+			},
+			{
+				"name": "describe lab",
+				"type": "node",
+				"request": "launch",
+				"skipFiles": [
+					"<node_internals>/**"
+				],
+				"program": "${workspaceFolder}/src/dev/labs/describe.ts"
+			},
+			{
+				"name": "enums lab",
+				"type": "node",
+				"request": "launch",
+				"skipFiles": [
+					"<node_internals>/**"
+				],
+				"program": "${workspaceFolder}/src/dev/labs/enums.ts"
 			}			
     ]
 }

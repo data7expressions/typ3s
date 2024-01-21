@@ -21,8 +21,8 @@
 		"schema",
 		"stringify"
 	],
-	"author": "Flavio Lionel Rita <flaviolrita@hotmail.com>",
-	"license": "Apache-2.0 License",
+	"author": "Flavio Lionel Rita <flaviolrita@proton.me>",
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/expr-solver/typ3s/issues"
 	},
@@ -30,7 +30,9 @@
 	"standard-version": {
 		"header": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n\n## Versions\n"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"h3lp": "^1.5.1"
+	},
 	"devDependencies": {
 		"@types/jest": "^29.5.11",
 		"@types/node": "^20.10.6",

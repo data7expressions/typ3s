@@ -1,4 +1,4 @@
-[jemv](../README.md) / ListType
+[Typ3s](../README.md) / ListType
 
 # Interface: ListType
 
@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[domain/type.ts:13](https://github.com/FlavioLionelRita/typ3s/blob/e58e635/src/lib/domain/type.ts#L13)
+[domain/type.ts:14](https://github.com/FlavioLionelRita/typ3s/blob/d6e5446/src/lib/domain/type.ts#L14)

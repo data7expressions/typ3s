@@ -1,6 +1,6 @@
-jemv
+Typ3s
 
-# jemv
+# Typ3s
 
 ## Table of contents
 
@@ -19,3 +19,4 @@ jemv
 - [ObjType](interfaces/ObjType.md)
 - [ParamType](interfaces/ParamType.md)
 - [PropertyType](interfaces/PropertyType.md)
+- [TypeOptions](interfaces/TypeOptions.md)
