@@ -1330,7 +1330,7 @@ Valid!
 
 ## Source documentation
 
-- Source documentation is available in [Source Code Documentation](https://github.com/expr-solver/typ3s/tree/main/doc/source)
+- Source documentation is available in [Source Code Documentation](https://github.com/data7expressions/typ3s/tree/main/doc/source)
 
 ## Related projects
 
