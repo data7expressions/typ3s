@@ -94,7 +94,7 @@
 
 #### Defined in
 
-[domain/type.ts:62](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L62)
+[domain/type.ts:62](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L62)
 
 ## Properties
 
@@ -104,7 +104,7 @@
 
 #### Defined in
 
-[domain/type.ts:36](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L36)
+[domain/type.ts:36](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L36)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:42](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L42)
+[domain/type.ts:42](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L42)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:43](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L43)
+[domain/type.ts:43](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L43)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:59](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L59)
+[domain/type.ts:59](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L59)
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:66](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L66)
+[domain/type.ts:66](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L66)
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:40](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L40)
+[domain/type.ts:40](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L40)
 
 ___
 
@@ -164,7 +164,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:65](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L65)
+[domain/type.ts:65](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L65)
 
 ___
 
@@ -174,7 +174,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:49](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L49)
+[domain/type.ts:49](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L49)
 
 ___
 
@@ -184,7 +184,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:51](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L51)
+[domain/type.ts:51](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L51)
 
 ___
 
@@ -194,7 +194,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:47](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L47)
+[domain/type.ts:47](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L47)
 
 ___
 
@@ -204,7 +204,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:50](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L50)
+[domain/type.ts:50](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L50)
 
 ___
 
@@ -214,7 +214,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:52](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L52)
+[domain/type.ts:52](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L52)
 
 ___
 
@@ -224,7 +224,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:34](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L34)
+[domain/type.ts:34](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L34)
 
 ___
 
@@ -234,7 +234,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:41](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L41)
+[domain/type.ts:41](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L41)
 
 ___
 
@@ -244,7 +244,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:64](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L64)
+[domain/type.ts:64](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L64)
 
 ___
 
@@ -254,7 +254,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:44](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L44)
+[domain/type.ts:44](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L44)
 
 ___
 
@@ -264,7 +264,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:45](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L45)
+[domain/type.ts:45](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L45)
 
 ___
 
@@ -274,7 +274,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:46](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L46)
+[domain/type.ts:46](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L46)
 
 ___
 
@@ -284,7 +284,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:54](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L54)
+[domain/type.ts:54](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L54)
 
 ___
 
@@ -294,7 +294,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:55](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L55)
+[domain/type.ts:55](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L55)
 
 ___
 
@@ -304,7 +304,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:56](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L56)
+[domain/type.ts:56](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L56)
 
 ___
 
@@ -314,7 +314,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:57](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L57)
+[domain/type.ts:57](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L57)
 
 ___
 
@@ -324,7 +324,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:58](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L58)
+[domain/type.ts:58](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L58)
 
 ___
 
@@ -334,7 +334,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:63](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L63)
+[domain/type.ts:63](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L63)
 
 ___
 
@@ -344,7 +344,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:39](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L39)
+[domain/type.ts:39](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L39)
 
 ___
 
@@ -354,7 +354,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:38](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L38)
+[domain/type.ts:38](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L38)
 
 ___
 
@@ -364,7 +364,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:53](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L53)
+[domain/type.ts:53](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L53)
 
 ___
 
@@ -374,7 +374,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:48](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L48)
+[domain/type.ts:48](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L48)
 
 ___
 
@@ -384,7 +384,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:35](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L35)
+[domain/type.ts:35](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L35)
 
 ___
 
@@ -394,7 +394,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:37](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L37)
+[domain/type.ts:37](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L37)
 
 ## Accessors
 
@@ -408,7 +408,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:69](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L69)
+[domain/type.ts:69](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L69)
 
 ___
 
@@ -422,7 +422,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:89](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L89)
+[domain/type.ts:89](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L89)
 
 ___
 
@@ -436,7 +436,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:93](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L93)
+[domain/type.ts:93](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L93)
 
 ___
 
@@ -450,7 +450,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:97](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L97)
+[domain/type.ts:97](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L97)
 
 ___
 
@@ -464,7 +464,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:81](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L81)
+[domain/type.ts:81](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L81)
 
 ___
 
@@ -478,7 +478,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:77](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L77)
+[domain/type.ts:77](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L77)
 
 ___
 
@@ -492,7 +492,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:85](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L85)
+[domain/type.ts:85](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L85)
 
 ___
 
@@ -506,7 +506,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:73](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L73)
+[domain/type.ts:73](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L73)
 
 ___
 
@@ -520,7 +520,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:101](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L101)
+[domain/type.ts:101](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L101)
 
 ___
 
@@ -534,7 +534,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:105](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L105)
+[domain/type.ts:105](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L105)
 
 ## Methods
 
@@ -555,7 +555,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:118](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L118)
+[domain/type.ts:118](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L118)
 
 ___
 
@@ -575,7 +575,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:114](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L114)
+[domain/type.ts:114](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L114)
 
 ___
 
@@ -595,7 +595,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:110](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L110)
+[domain/type.ts:110](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L110)
 
 ___
 
@@ -615,7 +615,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:241](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L241)
+[domain/type.ts:241](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L241)
 
 ___
 
@@ -635,7 +635,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:142](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L142)
+[domain/type.ts:142](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L142)
 
 ___
 
@@ -655,7 +655,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:190](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L190)
+[domain/type.ts:190](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L190)
 
 ___
 
@@ -675,7 +675,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:170](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L170)
+[domain/type.ts:170](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L170)
 
 ___
 
@@ -695,7 +695,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:177](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L177)
+[domain/type.ts:177](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L177)
 
 ___
 
@@ -715,7 +715,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:122](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L122)
+[domain/type.ts:122](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L122)
 
 ___
 
@@ -736,7 +736,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:772](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L772)
+[domain/type.ts:772](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L772)
 
 ___
 
@@ -756,7 +756,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:227](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L227)
+[domain/type.ts:227](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L227)
 
 ___
 
@@ -777,7 +777,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:231](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L231)
+[domain/type.ts:231](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L231)
 
 ___
 
@@ -797,7 +797,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:197](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L197)
+[domain/type.ts:197](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L197)
 
 ___
 
@@ -817,7 +817,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:134](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L134)
+[domain/type.ts:134](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L134)
 
 ___
 
@@ -838,7 +838,7 @@ ___
 
 #### Defined in
 
-[domain/type.ts:258](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L258)
+[domain/type.ts:258](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L258)
 
 ___
 
@@ -859,4 +859,4 @@ ___
 
 #### Defined in
 
-[domain/type.ts:248](https://github.com/data7expressions/typ3s/blob/29a63ec/src/lib/domain/type.ts#L248)
+[domain/type.ts:248](https://github.com/data7expressions/typ3s/blob/5c38dc2/src/lib/domain/type.ts#L248)
