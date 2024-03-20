@@ -1,6 +1,6 @@
 {
 	"name": "typ3s",
-	"version": "0.1.15",
+	"version": "0.1.16",
 	"description": "Allow define type on json",
 	"scripts": {
 		"lint": "npx eslint src",
@@ -31,14 +31,14 @@
 		"header": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n\n## Versions\n"
 	},
 	"dependencies": {
-		"h3lp": "^1.5.8"
+		"h3lp": "^1.6.1"
 	},
 	"devDependencies": {
 		"@types/jest": "^29.5.11",
 		"@types/node": "^20.10.6",
 		"@types/yargs": "^17.0.24",
-		"@typescript-eslint/eslint-plugin": "^6.12.0",
-		"@typescript-eslint/parser": "^6.14.0",
+		"@typescript-eslint/eslint-plugin": "^7.0.0",
+		"@typescript-eslint/parser": "^7.3.1",
 		"eslint": "^8.56.0",
 		"eslint-config-standard": "^17.1.0",
 		"eslint-plugin-import": "^2.27.5",
