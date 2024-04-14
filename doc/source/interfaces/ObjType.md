@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[domain/type.ts:10](https://github.com/data7expressions/typ3s/blob/6416747/src/lib/domain/type.ts#L10)
+[domain/type.ts:10](https://github.com/data7expressions/typ3s/blob/5fcfa25/src/lib/domain/type.ts#L10)
