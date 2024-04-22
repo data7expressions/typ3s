@@ -1,6 +1,6 @@
 /* eslint-disable no-use-before-define */
-import { Primitive } from './primitive'
-import { h3lp } from 'h3lp'
+import { Primitive } from '../domain/primitive'
+import { typeH3lp } from './helper'
 
 export interface PropertyType {
 	name:string
@@ -278,7 +278,7 @@ export class Type {
 			throw new Error(`${stringified} is undefined`)
 		}
 		if (Type.isObj(type) && type.obj) {
-			if (!h3lp.val.isObject(value)) {
+			if (!typeH3lp.val.isObject(value)) {
 				throw new Error(`${stringified} value: ${value} is not an object`)
 			}
 			for (const property of type.obj.properties) {
@@ -289,7 +289,7 @@ export class Type {
 				}
 			}
 		} else if (Type.isList(type) && type.list && type.list.items) {
-			if (!h3lp.val.isArray(value)) {
+			if (!typeH3lp.val.isArray(value)) {
 				throw new Error(`${stringified} value: ${value} is not an array`)
 			}
 			for (const item of value) {
@@ -304,42 +304,42 @@ export class Type {
 			switch (primitive) {
 			case Primitive.string:
 
-				if (!h3lp.val.isString(value)) {
+				if (!typeH3lp.val.isString(value)) {
 					throw new Error(`Value ${value} is not a string`)
 				}
 				break
 			case Primitive.integer:
-				if (!h3lp.val.isInteger(value)) {
+				if (!typeH3lp.val.isInteger(value)) {
 					throw new Error(`Value ${value} is not an integer`)
 				}
 				break
 			case Primitive.decimal:
-				if (!h3lp.val.isDecimal(value)) {
+				if (!typeH3lp.val.isDecimal(value)) {
 					throw new Error(`Value ${value} is not a number`)
 				}
 				break
 			case Primitive.number:
-				if (!h3lp.val.isNumber(value)) {
+				if (!typeH3lp.val.isNumber(value)) {
 					throw new Error(`Value ${value} is not a number`)
 				}
 				break
 			case Primitive.boolean:
-				if (!h3lp.val.isBoolean(value)) {
+				if (!typeH3lp.val.isBoolean(value)) {
 					throw new Error(`Value ${value} is not a boolean`)
 				}
 				break
 			case Primitive.date:
-				if (!h3lp.val.isDate(value)) {
+				if (!typeH3lp.val.isDate(value)) {
 					throw new Error(`Value ${value} is not a date`)
 				}
 				break
 			case Primitive.dateTime:
-				if (!h3lp.val.isDateTime(value)) {
+				if (!typeH3lp.val.isDateTime(value)) {
 					throw new Error(`Value ${value} is not a date`)
 				}
 				break
 			case Primitive.time:
-				if (!h3lp.val.isTime(value)) {
+				if (!typeH3lp.val.isTime(value)) {
 					throw new Error(`Value ${value} is not a date`)
 				}
 				break
