@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[domain/type.ts:6](https://github.com/data7expressions/typ3s/blob/e816eff/src/lib/domain/type.ts#L6)
+[domain/type.ts:6](https://github.com/data7expressions/typ3s/blob/761c5a6/src/lib/domain/type.ts#L6)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[domain/type.ts:7](https://github.com/data7expressions/typ3s/blob/e816eff/src/lib/domain/type.ts#L7)
+[domain/type.ts:7](https://github.com/data7expressions/typ3s/blob/761c5a6/src/lib/domain/type.ts#L7)
