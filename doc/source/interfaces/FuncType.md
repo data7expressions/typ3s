@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[src/lib/infrastructure/type.ts:18](https://github.com/data7expressions/typ3s/blob/846aeaa/src/lib/infrastructure/type.ts#L18)
+[src/lib/infrastructure/type.ts:18](https://github.com/data7expressions/typ3s/blob/6c66c76/src/lib/infrastructure/type.ts#L18)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[src/lib/infrastructure/type.ts:19](https://github.com/data7expressions/typ3s/blob/846aeaa/src/lib/infrastructure/type.ts#L19)
+[src/lib/infrastructure/type.ts:19](https://github.com/data7expressions/typ3s/blob/6c66c76/src/lib/infrastructure/type.ts#L19)

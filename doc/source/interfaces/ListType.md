@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[src/lib/infrastructure/type.ts:14](https://github.com/data7expressions/typ3s/blob/846aeaa/src/lib/infrastructure/type.ts#L14)
+[src/lib/infrastructure/type.ts:14](https://github.com/data7expressions/typ3s/blob/6c66c76/src/lib/infrastructure/type.ts#L14)
