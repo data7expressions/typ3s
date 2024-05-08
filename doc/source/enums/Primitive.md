@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[src/lib/domain/primitive.ts:2](https://github.com/data7expressions/typ3s/blob/6c66c76/src/lib/domain/primitive.ts#L2)
+[src/lib/domain/primitive.ts:2](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/domain/primitive.ts#L2)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[src/lib/domain/primitive.ts:7](https://github.com/data7expressions/typ3s/blob/6c66c76/src/lib/domain/primitive.ts#L7)
+[src/lib/domain/primitive.ts:7](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/domain/primitive.ts#L7)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[src/lib/domain/primitive.ts:8](https://github.com/data7expressions/typ3s/blob/6c66c76/src/lib/domain/primitive.ts#L8)
+[src/lib/domain/primitive.ts:8](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/domain/primitive.ts#L8)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[src/lib/domain/primitive.ts:9](https://github.com/data7expressions/typ3s/blob/6c66c76/src/lib/domain/primitive.ts#L9)
+[src/lib/domain/primitive.ts:9](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/domain/primitive.ts#L9)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[src/lib/domain/primitive.ts:5](https://github.com/data7expressions/typ3s/blob/6c66c76/src/lib/domain/primitive.ts#L5)
+[src/lib/domain/primitive.ts:5](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/domain/primitive.ts#L5)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[src/lib/domain/primitive.ts:14](https://github.com/data7expressions/typ3s/blob/6c66c76/src/lib/domain/primitive.ts#L14)
+[src/lib/domain/primitive.ts:14](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/domain/primitive.ts#L14)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[src/lib/domain/primitive.ts:4](https://github.com/data7expressions/typ3s/blob/6c66c76/src/lib/domain/primitive.ts#L4)
+[src/lib/domain/primitive.ts:4](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/domain/primitive.ts#L4)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[src/lib/domain/primitive.ts:13](https://github.com/data7expressions/typ3s/blob/6c66c76/src/lib/domain/primitive.ts#L13)
+[src/lib/domain/primitive.ts:13](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/domain/primitive.ts#L13)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-[src/lib/domain/primitive.ts:6](https://github.com/data7expressions/typ3s/blob/6c66c76/src/lib/domain/primitive.ts#L6)
+[src/lib/domain/primitive.ts:6](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/domain/primitive.ts#L6)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[src/lib/domain/primitive.ts:12](https://github.com/data7expressions/typ3s/blob/6c66c76/src/lib/domain/primitive.ts#L12)
+[src/lib/domain/primitive.ts:12](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/domain/primitive.ts#L12)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[src/lib/domain/primitive.ts:3](https://github.com/data7expressions/typ3s/blob/6c66c76/src/lib/domain/primitive.ts#L3)
+[src/lib/domain/primitive.ts:3](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/domain/primitive.ts#L3)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 #### Defined in
 
-[src/lib/domain/primitive.ts:10](https://github.com/data7expressions/typ3s/blob/6c66c76/src/lib/domain/primitive.ts#L10)
+[src/lib/domain/primitive.ts:10](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/domain/primitive.ts#L10)
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 #### Defined in
 
-[src/lib/domain/primitive.ts:15](https://github.com/data7expressions/typ3s/blob/6c66c76/src/lib/domain/primitive.ts#L15)
+[src/lib/domain/primitive.ts:15](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/domain/primitive.ts#L15)
 
 ___
 
@@ -159,4 +159,4 @@ ___
 
 #### Defined in
 
-[src/lib/domain/primitive.ts:11](https://github.com/data7expressions/typ3s/blob/6c66c76/src/lib/domain/primitive.ts#L11)
+[src/lib/domain/primitive.ts:11](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/domain/primitive.ts#L11)

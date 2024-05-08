@@ -47,7 +47,7 @@ H3lp.constructor
 
 #### Defined in
 
-[src/lib/infrastructure/helper.ts:4](https://github.com/data7expressions/typ3s/blob/6c66c76/src/lib/infrastructure/helper.ts#L4)
+[src/lib/infrastructure/helper.ts:4](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/helper.ts#L4)
 
 ## Properties
 
