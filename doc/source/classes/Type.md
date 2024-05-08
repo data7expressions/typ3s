@@ -1,862 +1,769 @@
+[**Typ3s**](../README.md) • **Docs**
+
+***
+
 [Typ3s](../README.md) / Type
 
 # Class: Type
 
-## Table of contents
-
-### Constructors
-
-- [constructor](Type.md#constructor)
-
-### Properties
-
-- [async](Type.md#async)
-- [count](Type.md#count)
-- [distinctCount](Type.md#distinctcount)
-- [enums](Type.md#enums)
-- [func](Type.md#func)
-- [indefinite](Type.md#indefinite)
-- [list](Type.md#list)
-- [max](Type.md#max)
-- [maxLen](Type.md#maxlen)
-- [mean](Type.md#mean)
-- [min](Type.md#min)
-- [minLen](Type.md#minlen)
-- [nullable](Type.md#nullable)
-- [nullables](Type.md#nullables)
-- [obj](Type.md#obj)
-- [onParentDistinctRepeated](Type.md#onparentdistinctrepeated)
-- [onParentDistinctRepeatedRate](Type.md#onparentdistinctrepeatedrate)
-- [onParentDistinctUnique](Type.md#onparentdistinctunique)
-- [percent10](Type.md#percent10)
-- [percent25](Type.md#percent25)
-- [percent50](Type.md#percent50)
-- [percent75](Type.md#percent75)
-- [percent90](Type.md#percent90)
-- [primitive](Type.md#primitive)
-- [repeatRate](Type.md#repeatrate)
-- [repeated](Type.md#repeated)
-- [std](Type.md#std)
-- [sum](Type.md#sum)
-- [undefinable](Type.md#undefinable)
-- [unique](Type.md#unique)
-
-### Accessors
-
-- [any](Type.md#any)
-- [boolean](Type.md#boolean)
-- [date](Type.md#date)
-- [dateTime](Type.md#datetime)
-- [decimal](Type.md#decimal)
-- [integer](Type.md#integer)
-- [number](Type.md#number)
-- [string](Type.md#string)
-- [time](Type.md#time)
-- [void](Type.md#void)
-
-### Methods
-
-- [Function](Type.md#function)
-- [List](Type.md#list-1)
-- [Obj](Type.md#obj-1)
-- [deserialize](Type.md#deserialize)
-- [get](Type.md#get)
-- [isFunc](Type.md#isfunc)
-- [isList](Type.md#islist)
-- [isObj](Type.md#isobj)
-- [isPrimitive](Type.md#isprimitive)
-- [key](Type.md#key)
-- [parse](Type.md#parse)
-- [serialize](Type.md#serialize)
-- [stringify](Type.md#stringify)
-- [to](Type.md#to)
-- [type](Type.md#type)
-- [validate](Type.md#validate)
-
 ## Constructors
 
-### constructor
+### new Type()
 
-• **new Type**(`primitive`, `obj?`, `list?`, `func?`): [`Type`](Type.md)
+> **new Type**(`primitive`, `obj`?, `list`?, `func`?): [`Type`](Type.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `primitive` | [`Primitive`](../enums/Primitive.md) |
-| `obj?` | [`ObjType`](../interfaces/ObjType.md) |
-| `list?` | [`ListType`](../interfaces/ListType.md) |
-| `func?` | [`FuncType`](../interfaces/FuncType.md) |
+• **primitive**: [`Primitive`](../enumerations/Primitive.md)
+
+• **obj?**: [`ObjType`](../interfaces/ObjType.md)
+
+• **list?**: [`ListType`](../interfaces/ListType.md)
+
+• **func?**: [`FuncType`](../interfaces/FuncType.md)
 
 #### Returns
 
 [`Type`](Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:62](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L62)
+[src/lib/infrastructure/type.ts:62](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L62)
 
 ## Properties
 
-### async
+### async?
 
-• `Optional` **async**: `boolean`
+> `optional` **async**: `boolean`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:36](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L36)
+[src/lib/infrastructure/type.ts:36](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L36)
 
-___
+***
 
-### count
+### count?
 
-• `Optional` **count**: `number`
+> `optional` **count**: `number`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:42](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L42)
+[src/lib/infrastructure/type.ts:42](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L42)
 
-___
+***
 
-### distinctCount
+### distinctCount?
 
-• `Optional` **distinctCount**: `number`
+> `optional` **distinctCount**: `number`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:43](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L43)
+[src/lib/infrastructure/type.ts:43](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L43)
 
-___
+***
 
-### enums
+### enums?
 
-• `Optional` **enums**: \{ `count`: `number` ; `value`: `any`  }[]
+> `optional` **enums**: `object`[]
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:59](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L59)
+[src/lib/infrastructure/type.ts:59](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L59)
 
-___
+***
 
-### func
+### func?
 
-• `Optional` **func**: [`FuncType`](../interfaces/FuncType.md)
+> `optional` **func**: [`FuncType`](../interfaces/FuncType.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:66](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L66)
+[src/lib/infrastructure/type.ts:66](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L66)
 
-___
+***
 
-### indefinite
+### indefinite?
 
-• `Optional` **indefinite**: `number`
+> `optional` **indefinite**: `number`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:40](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L40)
+[src/lib/infrastructure/type.ts:40](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L40)
 
-___
+***
 
-### list
+### list?
 
-• `Optional` **list**: [`ListType`](../interfaces/ListType.md)
+> `optional` **list**: [`ListType`](../interfaces/ListType.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:65](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L65)
+[src/lib/infrastructure/type.ts:65](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L65)
 
-___
+***
 
-### max
+### max?
 
-• `Optional` **max**: `any`
+> `optional` **max**: `any`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:49](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L49)
+[src/lib/infrastructure/type.ts:49](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L49)
 
-___
+***
 
-### maxLen
+### maxLen?
 
-• `Optional` **maxLen**: `number`
+> `optional` **maxLen**: `number`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:51](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L51)
+[src/lib/infrastructure/type.ts:51](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L51)
 
-___
+***
 
-### mean
+### mean?
 
-• `Optional` **mean**: `any`
+> `optional` **mean**: `any`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:47](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L47)
+[src/lib/infrastructure/type.ts:47](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L47)
 
-___
+***
 
-### min
+### min?
 
-• `Optional` **min**: `any`
+> `optional` **min**: `any`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:50](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L50)
+[src/lib/infrastructure/type.ts:50](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L50)
 
-___
+***
 
-### minLen
+### minLen?
 
-• `Optional` **minLen**: `number`
+> `optional` **minLen**: `number`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:52](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L52)
+[src/lib/infrastructure/type.ts:52](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L52)
 
-___
+***
 
-### nullable
+### nullable?
 
-• `Optional` **nullable**: `boolean`
+> `optional` **nullable**: `boolean`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:34](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L34)
+[src/lib/infrastructure/type.ts:34](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L34)
 
-___
+***
 
-### nullables
+### nullables?
 
-• `Optional` **nullables**: `number`
+> `optional` **nullables**: `number`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:41](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L41)
+[src/lib/infrastructure/type.ts:41](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L41)
 
-___
+***
 
-### obj
+### obj?
 
-• `Optional` **obj**: [`ObjType`](../interfaces/ObjType.md)
+> `optional` **obj**: [`ObjType`](../interfaces/ObjType.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:64](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L64)
+[src/lib/infrastructure/type.ts:64](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L64)
 
-___
+***
 
-### onParentDistinctRepeated
+### onParentDistinctRepeated?
 
-• `Optional` **onParentDistinctRepeated**: `number`
+> `optional` **onParentDistinctRepeated**: `number`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:44](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L44)
+[src/lib/infrastructure/type.ts:44](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L44)
 
-___
+***
 
-### onParentDistinctRepeatedRate
+### onParentDistinctRepeatedRate?
 
-• `Optional` **onParentDistinctRepeatedRate**: `number`
+> `optional` **onParentDistinctRepeatedRate**: `number`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:45](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L45)
+[src/lib/infrastructure/type.ts:45](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L45)
 
-___
+***
 
-### onParentDistinctUnique
+### onParentDistinctUnique?
 
-• `Optional` **onParentDistinctUnique**: `boolean`
+> `optional` **onParentDistinctUnique**: `boolean`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:46](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L46)
+[src/lib/infrastructure/type.ts:46](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L46)
 
-___
+***
 
-### percent10
+### percent10?
 
-• `Optional` **percent10**: `any`
+> `optional` **percent10**: `any`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:54](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L54)
+[src/lib/infrastructure/type.ts:54](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L54)
 
-___
+***
 
-### percent25
+### percent25?
 
-• `Optional` **percent25**: `any`
+> `optional` **percent25**: `any`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:55](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L55)
+[src/lib/infrastructure/type.ts:55](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L55)
 
-___
+***
 
-### percent50
+### percent50?
 
-• `Optional` **percent50**: `any`
+> `optional` **percent50**: `any`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:56](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L56)
+[src/lib/infrastructure/type.ts:56](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L56)
 
-___
+***
 
-### percent75
+### percent75?
 
-• `Optional` **percent75**: `any`
+> `optional` **percent75**: `any`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:57](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L57)
+[src/lib/infrastructure/type.ts:57](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L57)
 
-___
+***
 
-### percent90
+### percent90?
 
-• `Optional` **percent90**: `any`
+> `optional` **percent90**: `any`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:58](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L58)
+[src/lib/infrastructure/type.ts:58](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L58)
 
-___
+***
 
 ### primitive
 
-• **primitive**: [`Primitive`](../enums/Primitive.md)
+> **primitive**: [`Primitive`](../enumerations/Primitive.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:63](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L63)
+[src/lib/infrastructure/type.ts:63](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L63)
 
-___
+***
 
-### repeatRate
+### repeatRate?
 
-• `Optional` **repeatRate**: `number`
+> `optional` **repeatRate**: `number`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:39](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L39)
+[src/lib/infrastructure/type.ts:39](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L39)
 
-___
+***
 
-### repeated
+### repeated?
 
-• `Optional` **repeated**: `number`
+> `optional` **repeated**: `number`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:38](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L38)
+[src/lib/infrastructure/type.ts:38](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L38)
 
-___
+***
 
-### std
+### std?
 
-• `Optional` **std**: `number`
+> `optional` **std**: `number`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:53](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L53)
+[src/lib/infrastructure/type.ts:53](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L53)
 
-___
+***
 
-### sum
+### sum?
 
-• `Optional` **sum**: `any`
+> `optional` **sum**: `any`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:48](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L48)
+[src/lib/infrastructure/type.ts:48](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L48)
 
-___
+***
 
-### undefinable
+### undefinable?
 
-• `Optional` **undefinable**: `boolean`
+> `optional` **undefinable**: `boolean`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:35](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L35)
+[src/lib/infrastructure/type.ts:35](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L35)
 
-___
+***
 
-### unique
+### unique?
 
-• `Optional` **unique**: `boolean`
+> `optional` **unique**: `boolean`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:37](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L37)
+[src/lib/infrastructure/type.ts:37](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L37)
 
 ## Accessors
 
 ### any
 
-• `get` **any**(): [`Type`](Type.md)
+> `get` `static` **any**(): [`Type`](Type.md)
 
 #### Returns
 
 [`Type`](Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:69](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L69)
+[src/lib/infrastructure/type.ts:69](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L69)
 
-___
+***
 
 ### boolean
 
-• `get` **boolean**(): [`Type`](Type.md)
+> `get` `static` **boolean**(): [`Type`](Type.md)
 
 #### Returns
 
 [`Type`](Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:89](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L89)
+[src/lib/infrastructure/type.ts:89](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L89)
 
-___
+***
 
 ### date
 
-• `get` **date**(): [`Type`](Type.md)
+> `get` `static` **date**(): [`Type`](Type.md)
 
 #### Returns
 
 [`Type`](Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:93](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L93)
+[src/lib/infrastructure/type.ts:93](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L93)
 
-___
+***
 
 ### dateTime
 
-• `get` **dateTime**(): [`Type`](Type.md)
+> `get` `static` **dateTime**(): [`Type`](Type.md)
 
 #### Returns
 
 [`Type`](Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:97](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L97)
+[src/lib/infrastructure/type.ts:97](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L97)
 
-___
+***
 
 ### decimal
 
-• `get` **decimal**(): [`Type`](Type.md)
+> `get` `static` **decimal**(): [`Type`](Type.md)
 
 #### Returns
 
 [`Type`](Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:81](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L81)
+[src/lib/infrastructure/type.ts:81](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L81)
 
-___
+***
 
 ### integer
 
-• `get` **integer**(): [`Type`](Type.md)
+> `get` `static` **integer**(): [`Type`](Type.md)
 
 #### Returns
 
 [`Type`](Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:77](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L77)
+[src/lib/infrastructure/type.ts:77](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L77)
 
-___
+***
 
 ### number
 
-• `get` **number**(): [`Type`](Type.md)
+> `get` `static` **number**(): [`Type`](Type.md)
 
 #### Returns
 
 [`Type`](Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:85](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L85)
+[src/lib/infrastructure/type.ts:85](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L85)
 
-___
+***
 
 ### string
 
-• `get` **string**(): [`Type`](Type.md)
+> `get` `static` **string**(): [`Type`](Type.md)
 
 #### Returns
 
 [`Type`](Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:73](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L73)
+[src/lib/infrastructure/type.ts:73](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L73)
 
-___
+***
 
 ### time
 
-• `get` **time**(): [`Type`](Type.md)
+> `get` `static` **time**(): [`Type`](Type.md)
 
 #### Returns
 
 [`Type`](Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:101](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L101)
+[src/lib/infrastructure/type.ts:101](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L101)
 
-___
+***
 
 ### void
 
-• `get` **void**(): [`Type`](Type.md)
+> `get` `static` **void**(): [`Type`](Type.md)
 
 #### Returns
 
 [`Type`](Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:105](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L105)
+[src/lib/infrastructure/type.ts:105](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L105)
 
 ## Methods
 
-### Function
+### Function()
 
-▸ **Function**(`params`, `ret`): [`Type`](Type.md)
+> `static` **Function**(`params`, `ret`): [`Type`](Type.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | [`ParamType`](../interfaces/ParamType.md)[] |
-| `ret` | [`Type`](Type.md) |
+• **params**: [`ParamType`](../interfaces/ParamType.md)[]
+
+• **ret**: [`Type`](Type.md)
 
 #### Returns
 
 [`Type`](Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:118](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L118)
+[src/lib/infrastructure/type.ts:118](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L118)
 
-___
+***
 
-### List
+### List()
 
-▸ **List**(`items`): [`Type`](Type.md)
+> `static` **List**(`items`): [`Type`](Type.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `items` | [`Type`](Type.md) |
+• **items**: [`Type`](Type.md)
 
 #### Returns
 
 [`Type`](Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:114](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L114)
+[src/lib/infrastructure/type.ts:114](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L114)
 
-___
+***
 
-### Obj
+### Obj()
 
-▸ **Obj**(`properties?`): [`Type`](Type.md)
+> `static` **Obj**(`properties`): [`Type`](Type.md)
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `properties` | [`PropertyType`](../interfaces/PropertyType.md)[] | `[]` |
+• **properties**: [`PropertyType`](../interfaces/PropertyType.md)[]= `[]`
 
 #### Returns
 
 [`Type`](Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:110](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L110)
+[src/lib/infrastructure/type.ts:110](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L110)
 
-___
+***
 
-### deserialize
+### deserialize()
 
-▸ **deserialize**(`type?`): `undefined` \| [`Type`](Type.md)
+> `static` **deserialize**(`type`?): `undefined` \| [`Type`](Type.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `type?` | `string` |
+• **type?**: `string`
 
 #### Returns
 
 `undefined` \| [`Type`](Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:241](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L241)
+[src/lib/infrastructure/type.ts:241](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L241)
 
-___
+***
 
-### get
+### get()
 
-▸ **get**(`value`): [`Type`](Type.md)
+> `static` **get**(`value`): [`Type`](Type.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
+• **value**: `any`
 
 #### Returns
 
 [`Type`](Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:142](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L142)
+[src/lib/infrastructure/type.ts:142](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L142)
 
-___
+***
 
-### isFunc
+### isFunc()
 
-▸ **isFunc**(`type`): `boolean`
+> `static` **isFunc**(`type`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `type` | `string` \| [`Type`](Type.md) |
+• **type**: `string` \| [`Type`](Type.md)
 
 #### Returns
 
 `boolean`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:190](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L190)
+[src/lib/infrastructure/type.ts:190](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L190)
 
-___
+***
 
-### isList
+### isList()
 
-▸ **isList**(`type`): `boolean`
+> `static` **isList**(`type`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `type` | `string` \| [`Type`](Type.md) |
+• **type**: `string` \| [`Type`](Type.md)
 
 #### Returns
 
 `boolean`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:170](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L170)
+[src/lib/infrastructure/type.ts:170](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L170)
 
-___
+***
 
-### isObj
+### isObj()
 
-▸ **isObj**(`type`): `boolean`
+> `static` **isObj**(`type`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `type` | `string` \| [`Type`](Type.md) |
+• **type**: `string` \| [`Type`](Type.md)
 
 #### Returns
 
 `boolean`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:177](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L177)
+[src/lib/infrastructure/type.ts:177](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L177)
 
-___
+***
 
-### isPrimitive
+### isPrimitive()
 
-▸ **isPrimitive**(`type`): `boolean`
+> `static` **isPrimitive**(`type`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `type` | `string` \| [`Type`](Type.md) |
+• **type**: `string` \| [`Type`](Type.md)
 
 #### Returns
 
 `boolean`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:122](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L122)
+[src/lib/infrastructure/type.ts:122](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L122)
 
-___
+***
 
-### key
+### key()
 
-▸ **key**(`value`, `type`): `string`
+> `static` **key**(`value`, `type`): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
-| `type` | [`Type`](Type.md) |
+• **value**: `any`
+
+• **type**: [`Type`](Type.md)
 
 #### Returns
 
 `string`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:772](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L772)
+[src/lib/infrastructure/type.ts:772](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L772)
 
-___
+***
 
-### parse
+### parse()
 
-▸ **parse**(`stringified`): [`Type`](Type.md)
+> `static` **parse**(`stringified`): [`Type`](Type.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `stringified` | `string` |
+• **stringified**: `string`
 
 #### Returns
 
 [`Type`](Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:227](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L227)
+[src/lib/infrastructure/type.ts:227](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L227)
 
-___
+***
 
-### serialize
+### serialize()
 
-▸ **serialize**(`type?`, `indentation?`): `undefined` \| `string`
+> `static` **serialize**(`type`?, `indentation`?): `undefined` \| `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `type?` | [`Type`](Type.md) |
-| `indentation?` | `number` |
+• **type?**: [`Type`](Type.md)
+
+• **indentation?**: `number`
 
 #### Returns
 
 `undefined` \| `string`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:231](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L231)
+[src/lib/infrastructure/type.ts:231](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L231)
 
-___
+***
 
-### stringify
+### stringify()
 
-▸ **stringify**(`type?`): `string`
+> `static` **stringify**(`type`?): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `type?` | [`Type`](Type.md) |
+• **type?**: [`Type`](Type.md)
 
 #### Returns
 
 `string`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:197](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L197)
+[src/lib/infrastructure/type.ts:197](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L197)
 
-___
+***
 
-### to
+### to()
 
-▸ **to**(`primitive`): [`Type`](Type.md)
+> `static` **to**(`primitive`): [`Type`](Type.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `primitive` | `string` |
+• **primitive**: `string`
 
 #### Returns
 
 [`Type`](Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:134](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L134)
+[src/lib/infrastructure/type.ts:134](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L134)
 
-___
+***
 
-### type
+### type()
 
-▸ **type**(`value`, `options?`): [`Type`](Type.md)
+> `static` **type**(`value`, `options`?): [`Type`](Type.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
-| `options?` | [`TypeOptions`](../interfaces/TypeOptions.md) |
+• **value**: `any`
+
+• **options?**: [`TypeOptions`](../interfaces/TypeOptions.md)
 
 #### Returns
 
 [`Type`](Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:258](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L258)
+[src/lib/infrastructure/type.ts:258](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L258)
 
-___
+***
 
-### validate
+### validate()
 
-▸ **validate**(`value`, `type`): [`boolean`, `string`]
+> `static` **validate**(`value`, `type`): [`boolean`, `string`]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
-| `type` | `string` \| [`Type`](Type.md) |
+• **value**: `any`
+
+• **type**: `string` \| [`Type`](Type.md)
 
 #### Returns
 
 [`boolean`, `string`]
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:248](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L248)
+[src/lib/infrastructure/type.ts:248](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L248)

@@ -1,30 +1,27 @@
+[**Typ3s**](../README.md) • **Docs**
+
+***
+
 [Typ3s](../README.md) / PropertyType
 
 # Interface: PropertyType
-
-## Table of contents
-
-### Properties
-
-- [name](PropertyType.md#name)
-- [type](PropertyType.md#type)
 
 ## Properties
 
 ### name
 
-• **name**: `string`
+> **name**: `string`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:6](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L6)
+[src/lib/infrastructure/type.ts:6](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L6)
 
-___
+***
 
-### type
+### type?
 
-• `Optional` **type**: [`Type`](../classes/Type.md)
+> `optional` **type**: [`Type`](../classes/Type.md)
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:7](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L7)
+[src/lib/infrastructure/type.ts:7](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L7)

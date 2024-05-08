@@ -1,41 +1,37 @@
+[**Typ3s**](../README.md) • **Docs**
+
+***
+
 [Typ3s](../README.md) / TypeOptions
 
 # Interface: TypeOptions
 
-## Table of contents
-
-### Properties
-
-- [describe](TypeOptions.md#describe)
-- [enums](TypeOptions.md#enums)
-- [info](TypeOptions.md#info)
-
 ## Properties
 
-### describe
+### describe?
 
-• `Optional` **describe**: `boolean`
+> `optional` **describe**: `boolean`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:29](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L29)
+[src/lib/infrastructure/type.ts:29](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L29)
 
-___
+***
 
-### enums
+### enums?
 
-• `Optional` **enums**: `boolean`
+> `optional` **enums**: `boolean`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:30](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L30)
+[src/lib/infrastructure/type.ts:30](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L30)
 
-___
+***
 
-### info
+### info?
 
-• `Optional` **info**: `boolean`
+> `optional` **info**: `boolean`
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:28](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L28)
+[src/lib/infrastructure/type.ts:28](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L28)

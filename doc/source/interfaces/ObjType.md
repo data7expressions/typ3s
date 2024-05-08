@@ -1,19 +1,17 @@
+[**Typ3s**](../README.md) • **Docs**
+
+***
+
 [Typ3s](../README.md) / ObjType
 
 # Interface: ObjType
-
-## Table of contents
-
-### Properties
-
-- [properties](ObjType.md#properties)
 
 ## Properties
 
 ### properties
 
-• **properties**: [`PropertyType`](PropertyType.md)[]
+> **properties**: [`PropertyType`](PropertyType.md)[]
 
-#### Defined in
+#### Source
 
-[src/lib/infrastructure/type.ts:10](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/type.ts#L10)
+[src/lib/infrastructure/type.ts:10](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L10)

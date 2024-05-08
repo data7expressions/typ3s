@@ -1,19 +1,19 @@
-Typ3s
+**Typ3s** • **Docs**
+
+***
 
 # Typ3s
 
-## Table of contents
+## Enumerations
 
-### Enumerations
+- [Primitive](enumerations/Primitive.md)
 
-- [Primitive](enums/Primitive.md)
-
-### Classes
+## Classes
 
 - [Type](classes/Type.md)
 - [TypeH3lp](classes/TypeH3lp.md)
 
-### Interfaces
+## Interfaces
 
 - [FuncType](interfaces/FuncType.md)
 - [ListType](interfaces/ListType.md)
@@ -22,16 +22,6 @@ Typ3s
 - [PropertyType](interfaces/PropertyType.md)
 - [TypeOptions](interfaces/TypeOptions.md)
 
-### Variables
-
-- [typeH3lp](README.md#typeh3lp)
-
 ## Variables
 
-### typeH3lp
-
-• `Const` **typeH3lp**: [`TypeH3lp`](classes/TypeH3lp.md)
-
-#### Defined in
-
-[src/lib/infrastructure/helper.ts:8](https://github.com/data7expressions/typ3s/blob/0755677/src/lib/infrastructure/helper.ts#L8)
+- [typeH3lp](variables/typeH3lp.md)
