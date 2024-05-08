@@ -14,4 +14,4 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:14](https://github.com/data7expressions/typ3s/blob/109a62f/src/lib/infrastructure/type.ts#L14)
+[src/lib/infrastructure/type.ts:14](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L14)
