@@ -31,7 +31,7 @@
 		"header": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n\n## Versions\n"
 	},
 	"dependencies": {
-		"h3lp": "^1.10.1"
+		"h3lp": "^1.10.3"
 	},
 	"devDependencies": {
 		"@types/jest": "^29.5.11",
