@@ -30,7 +30,7 @@
 
 #### Source
 
-[src/lib/infrastructure/helper.ts:4](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/helper.ts#L4)
+[src/lib/infrastructure/helper.ts:4](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/helper.ts#L4)
 
 ## Properties
 

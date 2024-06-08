@@ -14,7 +14,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:29](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L29)
+[src/lib/infrastructure/type.ts:29](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L29)
 
 ***
 
@@ -24,7 +24,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:30](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L30)
+[src/lib/infrastructure/type.ts:30](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L30)
 
 ***
 
@@ -34,4 +34,4 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:28](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L28)
+[src/lib/infrastructure/type.ts:28](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L28)

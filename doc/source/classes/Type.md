@@ -28,7 +28,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:62](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L62)
+[src/lib/infrastructure/type.ts:62](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L62)
 
 ## Properties
 
@@ -38,7 +38,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:36](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L36)
+[src/lib/infrastructure/type.ts:36](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L36)
 
 ***
 
@@ -48,7 +48,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:42](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L42)
+[src/lib/infrastructure/type.ts:42](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L42)
 
 ***
 
@@ -58,7 +58,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:43](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L43)
+[src/lib/infrastructure/type.ts:43](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L43)
 
 ***
 
@@ -68,7 +68,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:59](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L59)
+[src/lib/infrastructure/type.ts:59](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L59)
 
 ***
 
@@ -78,7 +78,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:66](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L66)
+[src/lib/infrastructure/type.ts:66](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L66)
 
 ***
 
@@ -88,7 +88,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:40](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L40)
+[src/lib/infrastructure/type.ts:40](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L40)
 
 ***
 
@@ -98,7 +98,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:65](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L65)
+[src/lib/infrastructure/type.ts:65](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L65)
 
 ***
 
@@ -108,7 +108,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:49](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L49)
+[src/lib/infrastructure/type.ts:49](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L49)
 
 ***
 
@@ -118,7 +118,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:51](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L51)
+[src/lib/infrastructure/type.ts:51](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L51)
 
 ***
 
@@ -128,7 +128,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:47](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L47)
+[src/lib/infrastructure/type.ts:47](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L47)
 
 ***
 
@@ -138,7 +138,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:50](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L50)
+[src/lib/infrastructure/type.ts:50](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L50)
 
 ***
 
@@ -148,7 +148,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:52](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L52)
+[src/lib/infrastructure/type.ts:52](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L52)
 
 ***
 
@@ -158,7 +158,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:34](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L34)
+[src/lib/infrastructure/type.ts:34](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L34)
 
 ***
 
@@ -168,7 +168,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:41](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L41)
+[src/lib/infrastructure/type.ts:41](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L41)
 
 ***
 
@@ -178,7 +178,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:64](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L64)
+[src/lib/infrastructure/type.ts:64](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L64)
 
 ***
 
@@ -188,7 +188,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:44](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L44)
+[src/lib/infrastructure/type.ts:44](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L44)
 
 ***
 
@@ -198,7 +198,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:45](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L45)
+[src/lib/infrastructure/type.ts:45](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L45)
 
 ***
 
@@ -208,7 +208,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:46](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L46)
+[src/lib/infrastructure/type.ts:46](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L46)
 
 ***
 
@@ -218,7 +218,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:54](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L54)
+[src/lib/infrastructure/type.ts:54](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L54)
 
 ***
 
@@ -228,7 +228,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:55](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L55)
+[src/lib/infrastructure/type.ts:55](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L55)
 
 ***
 
@@ -238,7 +238,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:56](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L56)
+[src/lib/infrastructure/type.ts:56](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L56)
 
 ***
 
@@ -248,7 +248,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:57](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L57)
+[src/lib/infrastructure/type.ts:57](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L57)
 
 ***
 
@@ -258,7 +258,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:58](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L58)
+[src/lib/infrastructure/type.ts:58](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L58)
 
 ***
 
@@ -268,7 +268,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:63](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L63)
+[src/lib/infrastructure/type.ts:63](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L63)
 
 ***
 
@@ -278,7 +278,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:39](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L39)
+[src/lib/infrastructure/type.ts:39](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L39)
 
 ***
 
@@ -288,7 +288,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:38](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L38)
+[src/lib/infrastructure/type.ts:38](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L38)
 
 ***
 
@@ -298,7 +298,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:53](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L53)
+[src/lib/infrastructure/type.ts:53](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L53)
 
 ***
 
@@ -308,7 +308,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:48](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L48)
+[src/lib/infrastructure/type.ts:48](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L48)
 
 ***
 
@@ -318,7 +318,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:35](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L35)
+[src/lib/infrastructure/type.ts:35](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L35)
 
 ***
 
@@ -328,7 +328,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:37](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L37)
+[src/lib/infrastructure/type.ts:37](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L37)
 
 ## Accessors
 
@@ -342,7 +342,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:69](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L69)
+[src/lib/infrastructure/type.ts:69](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L69)
 
 ***
 
@@ -356,7 +356,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:89](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L89)
+[src/lib/infrastructure/type.ts:89](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L89)
 
 ***
 
@@ -370,7 +370,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:93](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L93)
+[src/lib/infrastructure/type.ts:93](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L93)
 
 ***
 
@@ -384,7 +384,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:97](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L97)
+[src/lib/infrastructure/type.ts:97](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L97)
 
 ***
 
@@ -398,7 +398,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:81](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L81)
+[src/lib/infrastructure/type.ts:81](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L81)
 
 ***
 
@@ -412,7 +412,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:77](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L77)
+[src/lib/infrastructure/type.ts:77](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L77)
 
 ***
 
@@ -426,7 +426,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:85](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L85)
+[src/lib/infrastructure/type.ts:85](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L85)
 
 ***
 
@@ -440,7 +440,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:73](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L73)
+[src/lib/infrastructure/type.ts:73](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L73)
 
 ***
 
@@ -454,7 +454,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:101](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L101)
+[src/lib/infrastructure/type.ts:101](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L101)
 
 ***
 
@@ -468,7 +468,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:105](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L105)
+[src/lib/infrastructure/type.ts:105](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L105)
 
 ## Methods
 
@@ -488,7 +488,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:118](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L118)
+[src/lib/infrastructure/type.ts:118](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L118)
 
 ***
 
@@ -506,7 +506,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:114](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L114)
+[src/lib/infrastructure/type.ts:114](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L114)
 
 ***
 
@@ -524,7 +524,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:110](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L110)
+[src/lib/infrastructure/type.ts:110](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L110)
 
 ***
 
@@ -542,7 +542,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:241](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L241)
+[src/lib/infrastructure/type.ts:241](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L241)
 
 ***
 
@@ -560,7 +560,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:142](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L142)
+[src/lib/infrastructure/type.ts:142](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L142)
 
 ***
 
@@ -578,7 +578,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:190](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L190)
+[src/lib/infrastructure/type.ts:190](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L190)
 
 ***
 
@@ -596,7 +596,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:170](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L170)
+[src/lib/infrastructure/type.ts:170](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L170)
 
 ***
 
@@ -614,7 +614,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:177](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L177)
+[src/lib/infrastructure/type.ts:177](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L177)
 
 ***
 
@@ -632,7 +632,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:122](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L122)
+[src/lib/infrastructure/type.ts:122](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L122)
 
 ***
 
@@ -652,7 +652,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:772](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L772)
+[src/lib/infrastructure/type.ts:772](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L772)
 
 ***
 
@@ -670,7 +670,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:227](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L227)
+[src/lib/infrastructure/type.ts:227](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L227)
 
 ***
 
@@ -690,7 +690,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:231](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L231)
+[src/lib/infrastructure/type.ts:231](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L231)
 
 ***
 
@@ -708,7 +708,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:197](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L197)
+[src/lib/infrastructure/type.ts:197](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L197)
 
 ***
 
@@ -726,7 +726,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:134](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L134)
+[src/lib/infrastructure/type.ts:134](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L134)
 
 ***
 
@@ -746,7 +746,7 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:258](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L258)
+[src/lib/infrastructure/type.ts:258](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L258)
 
 ***
 
@@ -766,4 +766,4 @@
 
 #### Source
 
-[src/lib/infrastructure/type.ts:248](https://github.com/data7expressions/typ3s/blob/c2159f3/src/lib/infrastructure/type.ts#L248)
+[src/lib/infrastructure/type.ts:248](https://github.com/data7expressions/typ3s/blob/0f522cb/src/lib/infrastructure/type.ts#L248)
