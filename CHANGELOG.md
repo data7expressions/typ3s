@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Versions
 
+### [1.0.7](https://github.com/data7expressions/typ3s/compare/v1.0.6...v1.0.7) (2024-06-08)
+
 ### [1.0.6](https://github.com/data7expressions/typ3s/compare/v1.0.5...v1.0.6) (2024-05-08)
 
 ### [1.0.5](https://github.com/data7expressions/typ3s/compare/v1.0.4...v1.0.5) (2024-05-08)
